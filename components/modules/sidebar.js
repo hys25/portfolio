@@ -1,0 +1,23 @@
+import { Fragment } from "react"
+import Logo from "../elements/logo"
+import Nav from "./nav"
+import SocialLinks from "../elements/socialLinks"
+import DownloadCv from "../elements/downloadCv"
+
+function Sidebar() {
+  return (
+    <div className="h-full w-fit  fixed left-[30px]">
+
+      <div className="h-full flex flex-col items-between justify-between flex-1">
+        <div className="mb-14 w-fit">
+          <Logo />
+          <Nav />
+          <SocialLinks />
+        </div>
+        <DownloadCv />
+      </div>
+    </div>
+  );
+}
+
+export default Sidebar;
