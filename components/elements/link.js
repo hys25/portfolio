@@ -6,10 +6,14 @@ const StyledLink = styled.a`
   text-orientation: upright;
 `;
 
-function NavLink({ href, name, className}) {
+function NavLink({ href, name, className }) {
   return (
     <Link href={href} passHref>
-      <StyledLink className={`transition-colors uppercase pb-4 w-min text-[12px] text-grey hover:text-white tracking-wide ${className}`}>{name}</StyledLink>
+      <StyledLink
+        className={`transition-colors uppercase pb-4 w-min text-[12px] text-grey hover:text-white tracking-wide ${className}`}
+      >
+        {name}
+      </StyledLink>
     </Link>
   );
 }

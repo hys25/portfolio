@@ -1,6 +1,6 @@
-import { Fragment } from "react"
-import Translation from "../elements/translation"
-import AboutThisWebsite from "../elements/aboutThisWebsite"
+import { Fragment } from "react";
+import Translation from "../elements/translation";
+import AboutThisWebsite from "../elements/aboutThisWebsite";
 
 function Footer() {
   return (
