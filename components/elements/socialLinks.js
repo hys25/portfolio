@@ -1,15 +1,18 @@
 import styled from "styled-components"
 import Image from 'next/image'
+import Link from "next/link"
 
 function SocialLinks() {
   return (
-    <div className="flex flex-col items-center pl-6 w-min">
-      <a href="https://github.com/hys25" target="_blanc" alt="github" className="mb-4 h-6 w-6">
-        <Image width='24px' height='24px' src='/link-github.png' alt="github"></Image>
-      </a>
-      <a href="https://www.linkedin.com/in/halyna-yavtushenko/" target="_blanc" alt="linkedin" className="mb-4 h-6 w-6">
-        <Image width='20px' height='20px' src='/link-linkedin.png' alt="linkedin" className="h-5 w-5"></Image>
-      </a>
+    <div className="flex flex-col items-center pl-6 w-min mb-5">
+      <Link href="https://github.com/hys25" passHref>
+        <a href="https://github.com/hys25" alt="github" target='_blank' className="relative h-6 w-6 text-white before:inline-block before:absolute before:w-5 before:h-5 before:hover:transition-all before:bg-[url('/icons/link-github-grey.svg')] before:right-1 before:bottom-0 before:bg-no-repeat before:bg-contain hover:before:bg-[url('/icons/link-github.png')] mb-2 transition-all">
+        </a>
+      </Link>
+      <Link href="https://www.linkedin.com/in/halyna-yavtushenko/"  passHref>
+        <a href="https://www.linkedin.com/in/halyna-yavtushenko/" alt="linkedin"  target='_blank' className="relative h-6 w-6  text-white transition-all before:inline-block before:absolute before:w-5 before:h-5 before:hover:transition-all before:bg-[url('/icons/link-linkedin-grey.svg')] before:right-1 before:bottom-0 before:bg-no-repeat before:bg-contain hover:before:bg-[url('/icons/link-linkedin.png')]">
+        </a>
+      </Link>
     </div>
 
   );

@@ -12,9 +12,11 @@ function Sidebar() {
         <div className="mb-14 w-fit">
           <Logo />
           <Nav />
-          <SocialLinks />
         </div>
-        <DownloadCv />
+        <div>
+          <SocialLinks />
+          <DownloadCv />
+        </div>
       </div>
     </div>
   );
