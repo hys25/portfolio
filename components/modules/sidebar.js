@@ -3,9 +3,9 @@ import Nav from "./nav"
 import SocialLinks from "../elements/socialLinks"
 import DownloadCv from "../elements/downloadCv"
 
-function Sidebar() {
+function Sidebar({ className }) {
   return (
-    <div className="fixed h-full w-fit left-[30px] z-[1]">
+    <div className={`fixed h-full w-fit left-[30px] z-[1] ${className}`}>
       <div className="flex flex-col flex-1 justify-between h-full items-between">
         <div className="mb-5 w-fit">
           <Logo />

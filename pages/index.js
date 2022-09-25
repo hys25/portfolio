@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import Default from "../components/layout/default"
 import { get } from "../lib/api"
+import { normalizeAnchor } from "../lib/utils"
 
 export async function getServerSideProps() {
   const { data, message, isError } = await get("http://localhost:3000/project")
@@ -61,28 +62,45 @@ function Homepage({ projects, message, isError }) {
             <div className="absolute top-0 left-0 z-0 w-full h-full bg-black opacity-0" />
           </div>
         </div>
-        <div className="flex flex-col justify-end items-end w-fit max-w-[600px]">
+        <div className="flex relative flex-col justify-end items-end w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
-          {mainProjects.map((project) => (
-            <Link key={project._id} href={`/project/${project._id}`} passHref>
-              <div className="flex flex-col items-end group h-[120px]">
-                <div className="uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey">
-                  {project.project_name}
+          {mainProjects.map(
+            ({ _id, project_name, project_stack, background_image_url }) => (
+              <Link
+                key={_id}
+                href={`/project#${normalizeAnchor(project_name)}`}
+                passHref
+              >
+                <div className="flex flex-col items-end group h-[120px]">
+                  <div className="flex flex-col cursor-pointer">
+                    <p className="z-20 uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey">
+                      {project_name}
+                    </p>
+                    <img
+                      alt="Project's background"
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-300px] left-[-300px] min-w-[600px] w-[600px]"
+                      src={`http://localhost:3000/${background_image_url}`}
+                    />
+                  </div>
+                  <p className="text-black normal-case ease-in-out group-hover:text-white text-[18px]">
+                    {project_stack}
+                  </p>
                 </div>
-                <p className="text-black normal-case ease-in-out group-hover:text-white text-[18px]">
-                  {project.project_stack}
-                </p>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            )
+          )}
           <div className="flex overflow-hidden flex-wrap justify-end items-end mt-[12px]">
             <span className="normal-case cursor-pointer text-[20px] text-grey">
               Other projects:
             </span>
-            {otherProjects.map((project) => (
-              <Link key={project.id} href={`/project/${project._id}`} passHref>
+            {otherProjects.map(({ _id, project_name }) => (
+              <Link
+                key={_id}
+                href={`/project#${normalizeAnchor(project_name)}`}
+                passHref
+              >
                 <div className="relative normal-case cursor-pointer hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px]">
-                  {project.project_name}
+                  {project_name}
                 </div>
               </Link>
             ))}

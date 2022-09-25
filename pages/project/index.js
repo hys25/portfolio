@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage"
 import { get } from "../../lib/api"
 import Sidebar from "../../components/modules/sidebar"
 import Footer from "../../components/modules/footer"
+import { normalizeAnchor } from "../../lib/utils"
 
 export async function getServerSideProps() {
   const { data, message, isError } = await get("http://localhost:3000/project")
@@ -18,11 +19,14 @@ export async function getServerSideProps() {
 function Project({ projects }) {
   return (
     <>
-      <Sidebar />
+      <Sidebar className="mt-5" />
       <Footer />
       <ReactFullpage
         navigation
         scrollingSpeed={500}
+        anchors={projects.map(
+          ({ project_name }) => `${normalizeAnchor(project_name)}`
+        )}
         render={() => (
           <ReactFullpage.Wrapper>
             {projects.map(
@@ -36,6 +40,7 @@ function Project({ projects }) {
                 your_impact,
               }) => (
                 <div
+                  data-anchor={`${normalizeAnchor(project_name)}`}
                   key={_id}
                   className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[70px] pr-[30px]"
                 >
