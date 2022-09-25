@@ -3,52 +3,6 @@ import { Fragment } from "react";
 import Default from "../components/layout/default";
 import {get} from "../lib/api"
 
-const projectsData = [
-  {
-    id: 0,
-    label: "Pixel Retail",
-    slug: "/pixel-retail",
-  },
-  {
-    id: 1,
-    label: "Dating App",
-    slug: "/dating-app",
-  },
-  {
-    id: 2,
-    label: "INVESTMENT WEBSITE",
-    slug: "/dating-app",
-  },
-  {
-    id: 3,
-    label: "CHAMPAGNE WEBSITE",
-    slug: "/dating-app",
-  },
-];
-const otherProjectsData = [
-  {
-    id: 0,
-    label: "Pixel Retail",
-    slug: "/pixel-retail",
-  },
-  {
-    id: 1,
-    label: "Dating App",
-    slug: "/dating-app",
-  },
-  {
-    id: 2,
-    label: "INVESTMENT WEBSITE",
-    slug: "/dating-app",
-  },
-  {
-    id: 3,
-    label: "CHAMPAGNE WEBSITE",
-    slug: "/dating-app",
-  },
-];
-
-
 export async function getServerSideProps(context) {
   const { data, message , isError } = await get('http://localhost:3000/project');
   return {
@@ -69,8 +23,8 @@ function Homepage({projects, message, isError}) {
         <div className="flex flex-col items-end justify-end w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
           {mainProjects.map((project) => (
-            <Link key={project._id} href={"#"} passHref>
-              <div className="flex flex-col items-end hover:text-red">
+            <Link key={project._id} href={`/project/${project._id}`} passHref>
+              <div className="flex flex-col items-end group h-[120px]">
                 <a
                   href="#"
                   alt="project"
@@ -78,12 +32,12 @@ function Homepage({projects, message, isError}) {
                 >
                   {project.project_name}
                 </a>
-                <p className="text-[16px] normal-case text-grey">{project.project_stack}</p>
+                <p className="text-black group-hover:text-white ease-in-out text-[18px] normal-case">{project.project_stack}</p>
               </div>
             </Link>
           ))}
-          <div className="flex flex-wrap items-end justify-end overflow-hidden">
-            <span className="text-[16px] normal-case text-grey cursor-pointer">
+          <div className="flex flex-wrap items-end justify-end overflow-hidden mt-[12px]">
+            <span className="text-[20px] normal-case text-grey cursor-pointer">
               Other projects:
             </span>
             {otherProjects.map((project) => (
@@ -91,7 +45,7 @@ function Homepage({projects, message, isError}) {
                 <a
                   href={"#"}
                   alt="project"
-                  className="relative text-[16px] normal-case text-grey cursor-pointer ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] hover:text-white"
+                  className="relative text-[20px] normal-case text-grey cursor-pointer ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] hover:text-white"
                 >
                   {project.project_name}
                 </a>

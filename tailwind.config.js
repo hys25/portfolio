@@ -21,6 +21,7 @@ module.exports = {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         fancy: ['Caveat'],
       },
+      display: ["group-hover"],
       colors: {
         white: '#FFFFFF',
         black: '#101011',

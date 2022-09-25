@@ -3,3 +3,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #101011;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+
+.fp-table {
+  justify-content: flex-start !important;
+}
+
+.fp-overflow {
+  height: inherit !important;
+}
+
+#fp-nav.fp-right {
+  height: 500px !important;
+  right: 30px !important;
+}
+
+#fp-nav.fp-right ul {
+  height: 500px !important;
+}
+
+#fp-nav.fp-right ul li {
+  margin: 0 !important;
+  width: 2px !important;
+  height: 15% !important;
+  background-color: #282828;
+}
+
+#fp-nav ul li a.active {
+  background-color: #FFFFFF !important;
+}
+
+#fp-nav ul li a span:last-child {
+  display: none !important;
+}
+
+#fp-nav ul li a span {
+  background-color: #282828 !important;
+}
+
