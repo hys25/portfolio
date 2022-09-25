@@ -3,9 +3,9 @@ import Link from "next/link";
 function Logo() {
   return (
     <Link href="/">
-      <a href="/" className="text-neutral-50 text-9xl font-fancy">
+      <a href="/" className="text-9xl text-neutral-50 font-fancy">
         G
-        <span className="text-neutral-50 text-4xl tracking-wider font-fancy">
+        <span className="text-4xl tracking-wider text-neutral-50 font-fancy">
           alinie
         </span>
       </a>

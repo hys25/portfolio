@@ -3,7 +3,7 @@ import Footer from "../modules/footer";
 
 function Default(props) {
   return (
-    <div className="w-screen h-screen bg-neutral-900 pt-5 pb-[70px] pl-[190px] pr-10 flex flex-col justify-between">
+    <div className="flex flex-col justify-between pt-5 pr-10 w-screen h-screen bg-neutral-900 pb-[70px] pl-[190px]">
       <Sidebar />
       {props.children}
       <Footer />

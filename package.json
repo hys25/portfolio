@@ -9,13 +9,15 @@
     "lint": "next lint",
     "prettier": "prettier --write './{pages,components}/**/*.js'",
     "eslint": "yarn lint -f stylish --fix",
-    "precommit": "yarn prettier && yarn eslint"
+    "precommit": "yarn prettier && yarn eslint",
+    "rustywind": "rustywind --write ."
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.28",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "rustywind": "^0.15.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

@@ -1,26 +1,68 @@
+import { useEffect, useState, Fragment } from "react";
 import Link from "next/link";
-import { Fragment } from "react";
 import Default from "../components/layout/default";
-import {get} from "../lib/api"
+import { get } from "../lib/api";
 
 export async function getServerSideProps(context) {
-  const { data, message , isError } = await get('http://localhost:3000/project');
+  const { data, message, isError } = await get("http://localhost:3000/project");
   return {
     props: {
-      projects : data,
+      projects: data,
       message,
-      isError
+      isError,
     },
-  }
+  };
 }
 
-function Homepage({projects, message, isError}) {
-  const mainProjects = projects.filter(project => project.main_project === true)
-  const otherProjects = projects.filter(project => project.main_project === false)
+function Homepage({ projects, message, isError }) {
+  const mainProjects = projects.filter(
+    (project) => project.main_project === true
+  );
+  const otherProjects = projects.filter(
+    (project) => project.main_project === false
+  );
+  const [mousePosition, setMousePosition] = useState({ top: 0, left: 0 });
+
+  useEffect(() => {
+    const image = document.getElementById("image");
+    const boundaries = image.getBoundingClientRect();
+    const handler = (event) => {
+      console.log("");
+      image.style.setProperty("--x", `${event.clientX - boundaries.left}px`);
+      image.style.setProperty("--y", `${event.clientY - boundaries.top}px`);
+      setMousePosition({ top: event.clientX, left: event.client });
+    };
+
+    document.addEventListener("mousemove", handler);
+    return () => {
+      document.removeEventListener("mousemove", handler);
+    };
+  });
+
   return (
     <Default>
-      <div className="h-full flex flex-col items-end justify-end">
-        <div className="flex flex-col items-end justify-end w-fit max-w-[600px]">
+      <div className="flex justify-between items-end h-full">
+        <div>
+          <div
+            className="fixed rounded-full w-[300px] h-[300px] z-[-2] bg-red"
+            style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
+          />
+          <div className="relative top-[-100px] left-[100px] h-[550px] w-[450px]">
+            <img
+              id="image"
+              src="/portfolio-my-picture.jpg"
+              alt="Picture of the author"
+              width={450}
+              height={550}
+              className="object-contain absolute top-0 left-0 z-10"
+              style={{
+                clipPath: "circle(150px at var(--x, -100%) var(--y, -100%))",
+              }}
+            />
+            <div className="absolute top-0 left-0 z-0 w-full h-full bg-black opacity-0" />
+          </div>
+        </div>
+        <div className="flex flex-col justify-end items-end w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
           {mainProjects.map((project) => (
             <Link key={project._id} href={`/project/${project._id}`} passHref>
@@ -28,24 +70,26 @@ function Homepage({projects, message, isError}) {
                 <a
                   href="#"
                   alt="project"
-                  className="whitespace-nowrap uppercase text-[56px] text-grey cursor-pointer hover:text-white"
+                  className="uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey"
                 >
                   {project.project_name}
                 </a>
-                <p className="text-black group-hover:text-white ease-in-out text-[18px] normal-case">{project.project_stack}</p>
+                <p className="text-black normal-case ease-in-out group-hover:text-white text-[18px]">
+                  {project.project_stack}
+                </p>
               </div>
             </Link>
           ))}
-          <div className="flex flex-wrap items-end justify-end overflow-hidden mt-[12px]">
-            <span className="text-[20px] normal-case text-grey cursor-pointer">
+          <div className="flex overflow-hidden flex-wrap justify-end items-end mt-[12px]">
+            <span className="normal-case cursor-pointer text-[20px] text-grey">
               Other projects:
             </span>
             {otherProjects.map((project) => (
-              <Link key={project.id} href={"#"} passHref>
+              <Link key={project.id} href="#" passHref>
                 <a
-                  href={"#"}
+                  href="#"
                   alt="project"
-                  className="relative text-[20px] normal-case text-grey cursor-pointer ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] hover:text-white"
+                  className="relative normal-case cursor-pointer hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px]"
                 >
                   {project.project_name}
                 </a>

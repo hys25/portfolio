@@ -96,7 +96,7 @@ export function PasswordInput({
         {...props}
       />
       <div className="absolute right-4 mr-1 max-h-5 cursor-pointer">
-        {"password" === type ? (
+        {type === "password" ? (
           <Image
             onClick={(e) => setType("text")}
             width={20}

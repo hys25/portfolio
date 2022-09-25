@@ -6,8 +6,8 @@ import DownloadCv from "../elements/downloadCv";
 
 function Sidebar() {
   return (
-    <div className="h-full w-fit fixed left-[30px] z-[1]">
-      <div className="h-full flex flex-col items-between justify-between flex-1">
+    <div className="fixed h-full w-fit left-[30px] z-[1]">
+      <div className="flex flex-col flex-1 justify-between h-full items-between">
         <div className="mb-5 w-fit">
           <Logo />
           <Nav />
