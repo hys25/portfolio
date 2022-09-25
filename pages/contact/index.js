@@ -1,13 +1,13 @@
-import { useState, Fragment } from "react";
-import Default from "../../components/layout/default";
-import { Input } from "../../components/elements/input";
+import { useState } from "react"
+import Default from "../../components/layout/default"
+import { Input } from "../../components/elements/input"
 
 function Contact() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
   const handleSearchSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   return (
     <Default>
@@ -70,6 +70,6 @@ function Contact() {
         </button>
       </form>
     </Default>
-  );
+  )
 }
-export default Contact;
+export default Contact

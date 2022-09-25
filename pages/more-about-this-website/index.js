@@ -1,5 +1,4 @@
-import { Fragment } from "react";
-import Default from "../../components/layout/default";
+import Default from "../../components/layout/default"
 
 function MoreAboutThisWebsite() {
   return (
@@ -9,6 +8,6 @@ function MoreAboutThisWebsite() {
         <div className="flex flex-col w-1/3">Full Features List :</div>
       </div>
     </Default>
-  );
+  )
 }
-export default MoreAboutThisWebsite;
+export default MoreAboutThisWebsite

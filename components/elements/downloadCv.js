@@ -1,7 +1,4 @@
-import { Fragment } from "react";
-import styled from "styled-components";
-import Image from "next/image";
-import { StyledLink } from "./link";
+import { StyledLink } from "./link"
 
 function DownloadCv() {
   return (
@@ -16,7 +13,7 @@ function DownloadCv() {
         Download cv
       </div>
     </StyledLink>
-  );
+  )
 }
 
-export default DownloadCv;
+export default DownloadCv

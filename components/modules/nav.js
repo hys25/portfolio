@@ -1,10 +1,8 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Fragment } from "react";
-import { NavLink } from "../elements/link";
+import { useRouter } from "next/router"
+import { NavLink } from "../elements/link"
 
-function Nav({ children, href }) {
-  const router = useRouter();
+function Nav() {
+  const router = useRouter()
   // const routes = ["about", "contact", "projects"];
   const routes = [
     {
@@ -19,7 +17,7 @@ function Nav({ children, href }) {
       name: "projects",
       path: "/",
     },
-  ];
+  ]
 
   return (
     <ul className="flex flex-col items-center pt-4 pl-6 text-neutral-50 max-w-[47px]">
@@ -29,7 +27,7 @@ function Nav({ children, href }) {
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

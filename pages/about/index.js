@@ -1,7 +1,6 @@
-import { Fragment } from "react";
-import Default from "../../components/layout/default";
+import Default from "../../components/layout/default"
 
 function About() {
-  return <Default />;
+  return <Default />
 }
-export default About;
+export default About

@@ -1,10 +1,10 @@
-import Link from "next/link";
-import styled from "styled-components";
+import Link from "next/link"
+import styled from "styled-components"
 
 const StyledLink = styled.a`
   writing-mode: vertical-rl;
   text-orientation: upright;
-`;
+`
 
 function NavLink({ href, name, active, className }) {
   return (
@@ -17,7 +17,7 @@ function NavLink({ href, name, active, className }) {
         {name}
       </StyledLink>
     </Link>
-  );
+  )
 }
 
-export { NavLink, StyledLink };
+export { NavLink, StyledLink }

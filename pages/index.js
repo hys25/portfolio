@@ -1,43 +1,42 @@
-import { useEffect, useState, Fragment } from "react";
-import Link from "next/link";
-import Default from "../components/layout/default";
-import { get } from "../lib/api";
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import Default from "../components/layout/default"
+import { get } from "../lib/api"
 
-export async function getServerSideProps(context) {
-  const { data, message, isError } = await get("http://localhost:3000/project");
+export async function getServerSideProps() {
+  const { data, message, isError } = await get("http://localhost:3000/project")
   return {
     props: {
       projects: data,
       message,
       isError,
     },
-  };
+  }
 }
 
 function Homepage({ projects, message, isError }) {
   const mainProjects = projects.filter(
     (project) => project.main_project === true
-  );
+  )
   const otherProjects = projects.filter(
     (project) => project.main_project === false
-  );
-  const [mousePosition, setMousePosition] = useState({ top: 0, left: 0 });
+  )
+  const [mousePosition, setMousePosition] = useState({ top: 0, left: 0 })
 
   useEffect(() => {
-    const image = document.getElementById("image");
-    const boundaries = image.getBoundingClientRect();
+    const image = document.getElementById("image")
+    const boundaries = image.getBoundingClientRect()
     const handler = (event) => {
-      console.log("");
-      image.style.setProperty("--x", `${event.clientX - boundaries.left}px`);
-      image.style.setProperty("--y", `${event.clientY - boundaries.top}px`);
-      setMousePosition({ top: event.clientX, left: event.client });
-    };
+      image.style.setProperty("--x", `${event.clientX - boundaries.left}px`)
+      image.style.setProperty("--y", `${event.clientY - boundaries.top}px`)
+      setMousePosition({ top: event.clientX, left: event.client })
+    }
 
-    document.addEventListener("mousemove", handler);
+    document.addEventListener("mousemove", handler)
     return () => {
-      document.removeEventListener("mousemove", handler);
-    };
-  });
+      document.removeEventListener("mousemove", handler)
+    }
+  })
 
   return (
     <Default>
@@ -51,7 +50,7 @@ function Homepage({ projects, message, isError }) {
             <img
               id="image"
               src="/portfolio-my-picture.jpg"
-              alt="Picture of the author"
+              alt="Author"
               width={450}
               height={550}
               className="object-contain absolute top-0 left-0 z-10"
@@ -67,13 +66,9 @@ function Homepage({ projects, message, isError }) {
           {mainProjects.map((project) => (
             <Link key={project._id} href={`/project/${project._id}`} passHref>
               <div className="flex flex-col items-end group h-[120px]">
-                <a
-                  href="#"
-                  alt="project"
-                  className="uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey"
-                >
+                <div className="uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey">
                   {project.project_name}
-                </a>
+                </div>
                 <p className="text-black normal-case ease-in-out group-hover:text-white text-[18px]">
                   {project.project_stack}
                 </p>
@@ -85,21 +80,17 @@ function Homepage({ projects, message, isError }) {
               Other projects:
             </span>
             {otherProjects.map((project) => (
-              <Link key={project.id} href="#" passHref>
-                <a
-                  href="#"
-                  alt="project"
-                  className="relative normal-case cursor-pointer hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px]"
-                >
+              <Link key={project.id} href={`/project/${project._id}`} passHref>
+                <div className="relative normal-case cursor-pointer hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px]">
                   {project.project_name}
-                </a>
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </div>
     </Default>
-  );
+  )
 }
 
-export default Homepage;
+export default Homepage

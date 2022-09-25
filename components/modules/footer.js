@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import Translation from "../elements/translation";
-import AboutThisWebsite from "../elements/aboutThisWebsite";
+import Translation from "../elements/translation"
+import AboutThisWebsite from "../elements/aboutThisWebsite"
 
 function Footer() {
   return (
@@ -8,7 +7,7 @@ function Footer() {
       <Translation />
       <AboutThisWebsite />
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

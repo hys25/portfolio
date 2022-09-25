@@ -1,19 +1,18 @@
-import { Fragment } from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
-import { get } from "../../lib/api";
-import Default from "../../components/layout/default";
-import Sidebar from "../../components/modules/sidebar";
-import Footer from "../../components/modules/footer";
+import { Fragment } from "react"
+import ReactFullpage from "@fullpage/react-fullpage"
+import { get } from "../../lib/api"
+import Sidebar from "../../components/modules/sidebar"
+import Footer from "../../components/modules/footer"
 
-export async function getServerSideProps(context) {
-  const { data, message, isError } = await get("http://localhost:3000/project");
+export async function getServerSideProps() {
+  const { data, message, isError } = await get("http://localhost:3000/project")
   return {
     props: {
       projects: data,
       message,
       isError,
     },
-  };
+  }
 }
 
 function Project({ projects }) {
@@ -24,7 +23,7 @@ function Project({ projects }) {
       <ReactFullpage
         navigation
         scrollingSpeed={500}
-        render={({ state, fullpageApi }) => (
+        render={() => (
           <ReactFullpage.Wrapper>
             {projects.map(
               ({
@@ -33,7 +32,6 @@ function Project({ projects }) {
                 main_image_url,
                 background_image_url,
                 project_description,
-                project_impact,
                 project_stack,
                 your_impact,
               }) => (
@@ -46,10 +44,12 @@ function Project({ projects }) {
                   </div>
                   <div className="flex relative flex-col justify-start items-start mx-auto max-w-[750px] mt-[100px]">
                     <img
+                      alt="Project"
                       className="object-cover mb-8 w-full max-h-[350px]"
                       src={`http://localhost:3000/${main_image_url}`}
                     />
                     <img
+                      alt="Project background"
                       className="object-cover absolute w-full top-[-160px] left-[-200px] min-w-[850px] z-[-1]"
                       src={`http://localhost:3000/${background_image_url}`}
                     />
@@ -71,6 +71,7 @@ function Project({ projects }) {
                     </div>
                   </div>
                   <img
+                    alt="Arrow down"
                     className="object-contain absolute bg-no-repeat bg-contain bottom-[90px] right-[21px] w-[20px] max-h-[200px]"
                     src="./../../icons/arrow-down-long-white.svg"
                   />
@@ -81,6 +82,6 @@ function Project({ projects }) {
         )}
       />
     </>
-  );
+  )
 }
-export default Project;
+export default Project

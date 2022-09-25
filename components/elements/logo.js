@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 function Logo() {
   return (
@@ -10,7 +10,7 @@ function Logo() {
         </span>
       </a>
     </Link>
-  );
+  )
 }
 
-export default Logo;
+export default Logo

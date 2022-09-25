@@ -1,8 +1,7 @@
-import { Fragment } from "react";
-import Logo from "../elements/logo";
-import Nav from "./nav";
-import SocialLinks from "../elements/socialLinks";
-import DownloadCv from "../elements/downloadCv";
+import Logo from "../elements/logo"
+import Nav from "./nav"
+import SocialLinks from "../elements/socialLinks"
+import DownloadCv from "../elements/downloadCv"
 
 function Sidebar() {
   return (
@@ -18,7 +17,7 @@ function Sidebar() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar

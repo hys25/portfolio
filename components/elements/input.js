@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Image from "next/image";
+import { useState } from "react"
+import Image from "next/image"
 
 function StyledInput({ placeholder, className, ...props }) {
   return (
@@ -8,7 +8,7 @@ function StyledInput({ placeholder, className, ...props }) {
       className={`px-5 w-full text-[14px] appearance-none focus:outline-none ${className}`}
       {...props}
     />
-  );
+  )
 }
 
 export function Input({
@@ -19,7 +19,6 @@ export function Input({
   children,
   placeholder,
   type = "text",
-  showSearchIcon = false,
   ...props
 }) {
   return (
@@ -36,7 +35,7 @@ export function Input({
       />
       {children || null}
     </div>
-  );
+  )
 }
 
 export function FormInput({
@@ -49,9 +48,9 @@ export function FormInput({
   valid,
   ...props
 }) {
-  let classes = `pr-12 pl-3 w-full h-[48px] text-xs rounded-md appearance-none border border-grey bg-white focus:outline-none font-bold`;
+  let classes = `pr-12 pl-3 w-full h-[48px] text-xs rounded-md appearance-none border border-grey bg-white focus:outline-none font-bold`
   if (disabled) {
-    classes += "text-coolGrey bg-paleGrey";
+    classes += "text-coolGrey bg-paleGrey"
   }
   return (
     <div className="flex relative items-center w-full text-black">
@@ -77,16 +76,11 @@ export function FormInput({
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export function PasswordInput({
-  setValue,
-  className,
-  password = false,
-  ...props
-}) {
-  const [type, setType] = useState("password");
+export function PasswordInput({ setValue, className, ...props }) {
+  const [type, setType] = useState("password")
   return (
     <div className={`relative flex items-center ${className}`}>
       <FormInput
@@ -98,14 +92,14 @@ export function PasswordInput({
       <div className="absolute right-4 mr-1 max-h-5 cursor-pointer">
         {type === "password" ? (
           <Image
-            onClick={(e) => setType("text")}
+            onClick={() => setType("text")}
             width={20}
             height={20}
             src="/icons/icon-eye-24-closed.svg"
           />
         ) : (
           <Image
-            onClick={(e) => setType("password")}
+            onClick={() => setType("password")}
             width={20}
             height={20}
             src="/icons/icon-eye-24.svg"
@@ -113,7 +107,7 @@ export function PasswordInput({
         )}
       </div>
     </div>
-  );
+  )
 }
 
 export function Textarea({
@@ -143,5 +137,5 @@ export function Textarea({
         )}
       </div>
     </div>
-  );
+  )
 }

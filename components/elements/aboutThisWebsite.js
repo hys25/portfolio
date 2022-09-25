@@ -1,10 +1,11 @@
-import Link from "next/link";
+import Link from "next/link"
 
 function AboutThisWebsite() {
   return (
     <div className="flex justify-center">
       <Link href="/more-about-this-website" passHref>
         <a
+          href="/more-about-this-website"
           alt="More about this website"
           className="hover:text-white text-grey text-[14px]"
         >
@@ -12,7 +13,7 @@ function AboutThisWebsite() {
         </a>
       </Link>
     </div>
-  );
+  )
 }
 
-export default AboutThisWebsite;
+export default AboutThisWebsite
