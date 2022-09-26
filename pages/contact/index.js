@@ -1,23 +1,23 @@
-import { useState, Fragment } from "react";
-import Default from "../../components/layout/default";
-import { Input } from "../../components/elements/input";
+import { useState } from "react"
+import Default from "../../components/layout/default"
+import { Input } from "../../components/elements/input"
 
 function Contact() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
   const handleSearchSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   return (
     <Default>
       <form
         onSubmit={handleSearchSubmit}
         method="post"
-        className="h-full fixed right-0 w-1/3 top-0 flex flex-col"
+        className="flex fixed top-0 right-0 flex-col w-1/3 h-full"
       >
-        <div className="h-1/3 w-full flex">
-          <div className="h-full w-1/2 mr-1 flex items-end">
+        <div className="flex w-full h-1/3">
+          <div className="flex items-end mr-1 w-1/2 h-full">
             <Input
               type="text"
               value={firstName}
@@ -27,7 +27,7 @@ function Contact() {
               placeholder="First name"
             />
           </div>
-          <div className="h-full w-1/2 ml-1 flex items-end">
+          <div className="flex items-end ml-1 w-1/2 h-full">
             <Input
               type="text"
               value={lastName}
@@ -38,8 +38,8 @@ function Contact() {
             />
           </div>
         </div>
-        <div className="h-[60px] w-full flex mt-2">
-          <div className="h-full w-full">
+        <div className="flex mt-2 w-full h-[60px]">
+          <div className="w-full h-full">
             <Input
               type="text"
               value={firstName}
@@ -50,8 +50,8 @@ function Contact() {
             />
           </div>
         </div>
-        <div className="h-auto w-full flex mt-2">
-          <div className="h-full w-full">
+        <div className="flex mt-2 w-full h-auto">
+          <div className="w-full h-full">
             <Input
               type="text"
               value={firstName}
@@ -64,12 +64,12 @@ function Contact() {
         </div>
         <button
           type="submit"
-          className="absolute right-0 w-full cursor-pointer bottom-[90px] h-[60px] text-white uppercase bg-grey"
+          className="absolute right-0 w-full text-white uppercase cursor-pointer bottom-[90px] h-[60px] bg-grey"
         >
           send message
         </button>
       </form>
     </Default>
-  );
+  )
 }
-export default Contact;
+export default Contact
