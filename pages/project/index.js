@@ -56,7 +56,7 @@ function Project({ projects }) {
                     />
                     <img
                       alt="Project background"
-                      className="object-cover absolute w-full top-[-160px] left-[-200px] min-w-[850px] z-[-1]"
+                      className="object-cover absolute w-full top-[-260px] left-[-350px] min-w-[850px] z-[-1]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                     <div className="mb-4 text-white">
