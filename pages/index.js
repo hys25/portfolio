@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import Link from "next/link"
 import Default from "../components/layout/default"
 import { get } from "../lib/api"
 import { normalizeAnchor } from "../lib/utils"
+import { NEXT_PUBLIC_BE_HOST } from "../config"
 
 export async function getServerSideProps() {
-  const { data, message, isError } = await get("http://localhost:3000/project")
+  const { data, message, isError } = await get(`${NEXT_PUBLIC_BE_HOST}/project`)
   return {
     props: {
       projects: data,
@@ -16,12 +17,18 @@ export async function getServerSideProps() {
 }
 
 function Homepage({ projects, message, isError }) {
-  const mainProjects = projects.filter(
-    (project) => project.main_project === true
-  )
-  const otherProjects = projects.filter(
-    (project) => project.main_project === false
-  )
+  const [mainProjects, otherProjects] = useMemo(() => {
+    const main = []
+    const other = []
+    projects.forEach((project) => {
+      if (project.main_project === true) {
+        main.push(project)
+      } else {
+        other.push(project)
+      }
+    })
+    return [main, other]
+  }, [projects])
   const [mousePosition, setMousePosition] = useState({ top: 0, left: 0 })
 
   useEffect(() => {
@@ -79,7 +86,7 @@ function Homepage({ projects, message, isError }) {
                     <img
                       alt="Project's background"
                       className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-300px] left-[-300px] min-w-[600px] w-[600px]"
-                      src={`http://localhost:3000/${background_image_url}`}
+                      src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                   </div>
                   <p className="text-black normal-case ease-in-out group-hover:text-white text-[18px]">

@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { get } from "../../lib/api"
 import Default from "../../components/layout/default"
+import { NEXT_PUBLIC_BE_HOST } from "../../config"
 
 export async function getServerSideProps() {
-  const { data, message, isError } = await get("http://localhost:3000/skill")
+  const { data, message, isError } = await get(`${NEXT_PUBLIC_BE_HOST}/skill`)
   return {
     props: {
       skills: data,

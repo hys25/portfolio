@@ -4,9 +4,10 @@ import { get } from "../../lib/api"
 import Sidebar from "../../components/modules/sidebar"
 import Footer from "../../components/modules/footer"
 import { normalizeAnchor } from "../../lib/utils"
+import { NEXT_PUBLIC_BE_HOST } from "../../config"
 
 export async function getServerSideProps() {
-  const { data, message, isError } = await get("http://localhost:3000/project")
+  const { data, message, isError } = await get(`${NEXT_PUBLIC_BE_HOST}/project`)
   return {
     props: {
       projects: data,
@@ -51,12 +52,12 @@ function Project({ projects }) {
                     <img
                       alt="Project"
                       className="object-cover mb-8 w-full max-h-[350px]"
-                      src={`http://localhost:3000/${main_image_url}`}
+                      src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
                     <img
                       alt="Project background"
                       className="object-cover absolute w-full top-[-160px] left-[-200px] min-w-[850px] z-[-1]"
-                      src={`http://localhost:3000/${background_image_url}`}
+                      src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                     <div className="mb-4 text-white">
                       <span className="mr-2 text-grey">
