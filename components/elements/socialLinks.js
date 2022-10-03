@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-function SocialLinks() {
+function SocialLinks({ className }) {
   return (
-    <div className="flex flex-col items-center pl-6 mb-5 w-min">
+    <div className={`flex flex-col items-center pl-6 mb-5 w-min ${className}`}>
       <Link href="https://github.com/hys25" passHref>
         <a
           href="https://github.com/hys25"

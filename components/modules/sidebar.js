@@ -5,15 +5,17 @@ import DownloadCv from "../elements/downloadCv"
 
 function Sidebar({ className }) {
   return (
-    <div className={`fixed h-full w-fit left-[30px] z-[1] ${className}`}>
+    <div
+      className={`fixed h-full w-fit left-[30px] z-[1] md:h-auto ${className}`}
+    >
       <div className="flex flex-col flex-1 justify-between h-full items-between">
         <div className="mb-5 w-fit">
           <Logo />
-          <Nav />
+          <Nav className="md:hidden" />
         </div>
         <div>
-          <SocialLinks />
-          <DownloadCv />
+          <SocialLinks className="md:hidden" />
+          <DownloadCv className="md:hidden" />
         </div>
       </div>
     </div>

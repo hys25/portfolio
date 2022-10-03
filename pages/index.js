@@ -48,20 +48,20 @@ function Homepage({ projects, message, isError }) {
 
   return (
     <Default>
-      <div className="flex justify-between items-end h-full">
+      <div className="flex justify-between items-end h-full md:flex-col">
         <div>
           <div
-            className="fixed rounded-full w-[300px] h-[300px] z-[-2] bg-red"
+            className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
           />
-          <div className="relative top-[-100px] left-[100px] h-[550px] w-[450px]">
+          <div className="relative top-[-100px] left-[100px] h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[50px] md:left-[-100px]">
             <img
               id="image"
               src="/portfolio-my-picture.jpg"
               alt="Author"
               width={450}
               height={550}
-              className="object-contain absolute top-0 left-0 z-10"
+              className="object-contain absolute top-0 left-0 z- md:h-[200px] md:w-[160px]"
               style={{
                 clipPath: "circle(150px at var(--x, -100%) var(--y, -100%))",
               }}
@@ -78,18 +78,18 @@ function Homepage({ projects, message, isError }) {
                 href={`/project#${normalizeAnchor(project_name)}`}
                 passHref
               >
-                <div className="flex flex-col items-end group h-[120px]">
+                <div className="flex flex-col items-end md:h-auto group h-[120px]">
                   <div className="flex flex-col cursor-pointer">
-                    <p className="z-20 uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey">
+                    <p className="z-20 uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey md:text-[18px]">
                       {project_name}
                     </p>
                     <img
                       alt="Project's background"
-                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-150px] left-[-700px] min-w-[1100px] w-[900px]"
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-150px] left-[-700px] min-w-[1100px] w-[900px]  md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-60%]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                   </div>
-                  <p className="text-black normal-case ease-in-out group-hover:text-white text-[18px]">
+                  <p className="text-black normal-case ease-in-out md:block group-hover:text-white text-[18px] md:text-[14px]">
                     {project_stack}
                   </p>
                 </div>

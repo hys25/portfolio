@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-function AboutThisWebsite() {
+function AboutThisWebsite({ className }) {
   return (
-    <div className="flex justify-center">
+    <div className={`flex justify-center ${className}`}>
       <Link href="/more-about-this-website" passHref>
         <a
           href="/more-about-this-website"
