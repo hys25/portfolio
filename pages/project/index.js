@@ -48,15 +48,15 @@ function Project({ projects }) {
                   <div className="w-full text-right text-white text-[56px] mt-[35px]">
                     {project_name}
                   </div>
-                  <div className="flex relative flex-col justify-start items-start mx-auto max-w-[750px] mt-[100px]">
+                  <div className="flex relative flex-col justify-start items-start mx-auto max-w-[750px] mt-[30px]">
                     <img
                       alt="Project"
-                      className="object-cover mb-8 w-full max-h-[350px]"
+                      className="object-contain mb-8 w-full h-[450px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
                     <img
                       alt="Project background"
-                      className="object-cover absolute w-full top-[-260px] left-[-350px] min-w-[850px] z-[-1]"
+                      className="object-contain absolute w-full top-[-20px] left-[-250px] min-w-[1000px] z-[-1] max-h-[700px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                     <div className="mb-4 text-white">

@@ -85,7 +85,7 @@ function Homepage({ projects, message, isError }) {
                     </p>
                     <img
                       alt="Project's background"
-                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-300px] left-[-300px] min-w-[600px] w-[600px]"
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-150px] left-[-700px] min-w-[1100px] w-[900px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                   </div>
