@@ -48,7 +48,7 @@ function Project({ projects }) {
                   <div className="w-full text-right text-white text-[56px] mt-[35px]">
                     {project_name}
                   </div>
-                  <div className="flex relative flex-col justify-start items-start mx-auto max-w-[750px] mt-[30px]">
+                  <div className="flex flex-col justify-start items-start mx-auto max-w-[750px] mt-[30px]">
                     <img
                       alt="Project"
                       className="object-contain mb-8 w-full h-[450px]"
@@ -56,7 +56,7 @@ function Project({ projects }) {
                     />
                     <img
                       alt="Project background"
-                      className="object-contain absolute w-full top-[-20px] left-[-250px] min-w-[1000px] z-[-1] max-h-[700px]"
+                      className="object-contain absolute w-full top-[170px] left-[70px] max-w-[1000px] z-[-1] max-h-[700px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
                     <div className="mb-4 text-white">

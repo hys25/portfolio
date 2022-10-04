@@ -54,7 +54,7 @@ function Homepage({ projects, message, isError }) {
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
           />
-          <div className="relative top-[-100px] left-[100px] h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[50px] md:left-[-100px]">
+          <div className="relative top-[-100px] left-0 h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[50px] md:left-[-100px]">
             <img
               id="image"
               src="/portfolio-my-picture.jpg"
@@ -72,7 +72,13 @@ function Homepage({ projects, message, isError }) {
         <div className="flex relative flex-col justify-end items-end w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
           {mainProjects.map(
-            ({ _id, project_name, project_stack, background_image_url }) => (
+            ({
+              _id,
+              project_name,
+              project_stack,
+              background_image_url,
+              main_image_url,
+            }) => (
               <Link
                 key={_id}
                 href={`/project#${normalizeAnchor(project_name)}`}
@@ -85,8 +91,12 @@ function Homepage({ projects, message, isError }) {
                     </p>
                     <img
                       alt="Project's background"
-                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-150px] left-[-700px] min-w-[1100px] w-[900px]  md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-60%]"
-                      src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-60%]"
+                      src={`${NEXT_PUBLIC_BE_HOST}/${
+                        background_image_url
+                          ? background_image_url
+                          : main_image_url
+                      }`}
                     />
                   </div>
                   <p className="text-black normal-case ease-in-out md:block group-hover:text-white text-[18px] md:text-[14px]">
