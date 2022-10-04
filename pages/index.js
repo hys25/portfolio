@@ -4,6 +4,7 @@ import Default from "../components/layout/default"
 import { get } from "../lib/api"
 import { normalizeAnchor } from "../lib/utils"
 import { NEXT_PUBLIC_BE_HOST } from "../config"
+import { useMedia } from "../providers/mediaContext"
 
 export async function getServerSideProps() {
   const { data, message, isError } = await get(`${NEXT_PUBLIC_BE_HOST}/project`)
@@ -17,6 +18,7 @@ export async function getServerSideProps() {
 }
 
 function Homepage({ projects, message, isError }) {
+  const { xl } = useMedia()
   const [mainProjects, otherProjects] = useMemo(() => {
     const main = []
     const other = []
@@ -54,7 +56,7 @@ function Homepage({ projects, message, isError }) {
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
           />
-          <div className="relative top-[-100px] left-0 h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[50px] md:left-[-100px]">
+          <div className="relative left-0 top-[-100px] h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[50px] md:left-[-100px]">
             <img
               id="image"
               src="/portfolio-my-picture.jpg"
@@ -62,9 +64,17 @@ function Homepage({ projects, message, isError }) {
               width={450}
               height={550}
               className="object-contain absolute top-0 left-0 z- md:h-[200px] md:w-[160px]"
-              style={{
-                clipPath: "circle(150px at var(--x, -100%) var(--y, -100%))",
-              }}
+              style={
+                xl
+                  ? {
+                      clipPath:
+                        "circle(50px at var(--x, -100%) var(--y, -100%))",
+                    }
+                  : {
+                      clipPath:
+                        "circle(150px at var(--x, -100%) var(--y, -100%))",
+                    }
+              }
             />
             <div className="absolute top-0 left-0 z-0 w-full h-full bg-black opacity-0" />
           </div>
