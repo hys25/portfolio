@@ -56,7 +56,7 @@ function Homepage({ projects, message, isError }) {
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
           />
-          <div className="relative left-0 top-[-100px] h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[50px] md:left-[-100px]">
+          <div className="relative left-0 top-[-100px] h-[550px] w-[450px] md:h-[200px] md:w-[160px] md:top-[80px] md:left-[-100px]">
             <img
               id="image"
               src="/portfolio-my-picture.jpg"
@@ -79,7 +79,7 @@ function Homepage({ projects, message, isError }) {
             <div className="absolute top-0 left-0 z-0 w-full h-full bg-black opacity-0" />
           </div>
         </div>
-        <div className="flex relative flex-col justify-end items-end w-fit max-w-[600px]">
+        <div className="flex relative flex-col justify-end items-end md:justify-start md:items-start w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
           {mainProjects.map(
             ({
@@ -94,14 +94,14 @@ function Homepage({ projects, message, isError }) {
                 href={`/project#${normalizeAnchor(project_name)}`}
                 passHref
               >
-                <div className="flex flex-col items-end md:h-auto group h-[120px]">
+                <div className="flex flex-col items-end md:justify-start md:items-start md:h-auto group h-[120px]">
                   <div className="flex flex-col cursor-pointer">
-                    <p className="z-20 uppercase whitespace-nowrap cursor-pointer hover:text-white text-[56px] text-grey md:text-[18px]">
+                    <p className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white hover:text-white text-[56px] text-grey md:text-[18px]">
                       {project_name}
                     </p>
                     <img
                       alt="Project's background"
-                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-60%]"
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-85%]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${
                         background_image_url
                           ? background_image_url
@@ -116,8 +116,8 @@ function Homepage({ projects, message, isError }) {
               </Link>
             )
           )}
-          <div className="flex overflow-hidden flex-wrap justify-end items-end mt-[12px]">
-            <span className="normal-case cursor-pointer text-[20px] text-grey">
+          <div className="flex overflow-hidden flex-wrap justify-end items-end md:justify-start md:items-start mt-[12px]">
+            <span className="normal-case cursor-pointer text-[20px] text-grey md:mr-[10px] md:text-[16px]">
               Other projects:
             </span>
             {otherProjects.map(({ _id, project_name }) => (
@@ -126,7 +126,7 @@ function Homepage({ projects, message, isError }) {
                 href={`/project#${normalizeAnchor(project_name)}`}
                 passHref
               >
-                <div className="relative normal-case cursor-pointer hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px]">
+                <div className="relative normal-case cursor-pointer md:ml-0 hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] md:mr-[10px] md:after:hidden md:text-[16px]">
                   {project_name}
                 </div>
               </Link>
