@@ -43,33 +43,33 @@ function Project({ projects }) {
                 <div
                   data-anchor={`${normalizeAnchor(project_name)}`}
                   key={_id}
-                  className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[70px] pr-[30px]"
+                  className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[70px] pr-[30px] md:pt-[70px] md:px-[20px]"
                 >
-                  <div className="w-full text-right text-white text-[56px] mt-[35px]">
+                  <div className="w-full text-right text-white uppercase md:mt-3 md:text-center text-[56px] mt-[35px] md:text-[18px]">
                     {project_name}
                   </div>
-                  <div className="flex flex-col justify-start items-start mx-auto max-w-[750px] mt-[30px]">
+                  <div className="flex flex-col justify-start items-start mx-auto max-w-[750px] mt-[30px] md:mt-[15px]">
                     <img
                       alt="Project"
-                      className="object-contain mb-8 w-full h-[450px]"
+                      className="object-contain mb-8 w-full md:object-cover md:mb-4 h-[450px] md:h-[220px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
                     <img
                       alt="Project background"
-                      className="object-contain absolute w-full top-[170px] left-[70px] max-w-[1000px] z-[-1] max-h-[700px]"
+                      className="object-contain absolute w-full md:hidden top-[170px] left-[70px] max-w-[1000px] z-[-1] max-h-[700px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                     />
-                    <div className="mb-4 text-white">
+                    <div className="mb-4 text-white md:mb-2 md:font-thin md:text-[14px]">
                       <span className="mr-2 text-grey">
                         Project description:
                       </span>
                       {project_description}
                     </div>
-                    <div className="mb-4 text-white">
+                    <div className="mb-4 text-white md:mb-2 md:font-thin md:text-[14px]">
                       <span className="mr-2 text-grey">Project stack:</span>
                       {project_stack}
                     </div>
-                    <div className="mb-4 text-white">
+                    <div className="mb-4 text-white md:mb-2 md:font-thin md:text-[14px]">
                       <span className="mr-2 text-grey">
                         My role on project:
                       </span>
@@ -78,7 +78,7 @@ function Project({ projects }) {
                   </div>
                   <img
                     alt="Arrow down"
-                    className="object-contain absolute bg-no-repeat bg-contain bottom-[90px] right-[21px] w-[20px] max-h-[200px]"
+                    className="object-contain absolute bg-no-repeat bg-contain bottom-[90px] right-[21px] w-[20px] max-h-[200px] md:right-[1px]"
                     src="./../../icons/arrow-down-long-white.svg"
                   />
                 </div>

@@ -116,8 +116,8 @@ function Homepage({ projects, message, isError }) {
               </Link>
             )
           )}
-          <div className="flex overflow-hidden flex-wrap justify-end items-end md:justify-start md:items-start mt-[12px]">
-            <span className="normal-case cursor-pointer text-[20px] text-grey md:mr-[10px] md:text-[16px]">
+          <div className="flex overflow-hidden flex-wrap justify-end items-end md:justify-start md:items-start md:mt-0 mt-[12px]">
+            <span className="normal-case cursor-pointer md:font-thin text-[20px] text-grey md:mr-[10px] md:text-[16px]">
               Other projects:
             </span>
             {otherProjects.map(({ _id, project_name }) => (
@@ -126,7 +126,7 @@ function Homepage({ projects, message, isError }) {
                 href={`/project#${normalizeAnchor(project_name)}`}
                 passHref
               >
-                <div className="relative normal-case cursor-pointer md:ml-0 hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] md:mr-[10px] md:after:hidden md:text-[16px]">
+                <div className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] md:mr-[10px] md:after:hidden md:text-[16px]">
                   {project_name}
                 </div>
               </Link>
