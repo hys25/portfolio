@@ -3,8 +3,10 @@ import ReactFullpage from "@fullpage/react-fullpage"
 import { get } from "../../lib/api"
 import Sidebar from "../../components/modules/sidebar"
 import Footer from "../../components/modules/footer"
+import NavMobile from "../../components/modules/navMobile"
 import { normalizeAnchor } from "../../lib/utils"
 import { NEXT_PUBLIC_BE_HOST } from "../../config"
+import { useMedia } from "../../providers/mediaContext"
 
 export async function getServerSideProps() {
   const { data, message, isError } = await get(`${NEXT_PUBLIC_BE_HOST}/project`)
@@ -18,9 +20,14 @@ export async function getServerSideProps() {
 }
 
 function Project({ projects }) {
+  const { xl } = useMedia()
   return (
     <>
-      <Sidebar className="mt-5" />
+      {xl ? (
+        <NavMobile className="mt-5 pr-[20px]" />
+      ) : (
+        <Sidebar className="mt-5" />
+      )}
       <Footer />
       <ReactFullpage
         navigation
@@ -43,7 +50,7 @@ function Project({ projects }) {
                 <div
                   data-anchor={`${normalizeAnchor(project_name)}`}
                   key={_id}
-                  className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[70px] pr-[30px] md:pt-[70px] md:px-[20px]"
+                  className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[70px] pr-[30px] md:pt-[90px] md:px-[20px]"
                 >
                   <div className="w-full text-right text-white uppercase md:mt-3 md:text-center text-[56px] mt-[35px] md:text-[18px]">
                     {project_name}

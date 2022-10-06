@@ -79,7 +79,7 @@ function Homepage({ projects, message, isError }) {
             <div className="absolute top-0 left-0 z-0 w-full h-full bg-black opacity-0" />
           </div>
         </div>
-        <div className="flex relative flex-col justify-end items-end md:justify-start md:items-start w-fit max-w-[600px]">
+        <div className="flex relative z-0 flex-col justify-end items-end md:justify-start md:items-start w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
           {mainProjects.map(
             ({

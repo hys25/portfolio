@@ -1,23 +1,9 @@
 import { useRouter } from "next/router"
 import { NavLink } from "../elements/link"
+import { routes } from "../../config/navRoutes"
 
 function Nav({ className }) {
   const router = useRouter()
-  // const routes = ["about", "contact", "projects"];
-  const routes = [
-    {
-      name: "about",
-      path: "/about",
-    },
-    {
-      name: "contact",
-      path: "/contact",
-    },
-    {
-      name: "projects",
-      path: "/",
-    },
-  ]
 
   return (
     <ul
