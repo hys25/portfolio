@@ -1,36 +1,32 @@
-function StyledInput({ placeholder, className, ...props }) {
-  return (
-    <input
-      placeholder={placeholder}
-      className={`px-5 w-full text-[14px] appearance-none focus:outline-none ${className}`}
-      {...props}
-    />
-  )
-}
+import React from "react"
 
-export function Input({
-  setValue,
-  value,
-  className,
-  classNameWrapper,
-  children,
-  placeholder,
-  type = "text",
-  ...props
-}) {
-  return (
-    <div
-      {...props}
-      className={`flex relative items-center text-black ${classNameWrapper}`}
-    >
-      <StyledInput
-        type={type}
-        onChange={(e) => setValue(e.target.value)}
-        value={value}
-        className={className}
+const StyledInput = React.forwardRef(
+  ({ placeholder, className, ...props }, ref) => {
+    return (
+      <input
+        ref={ref}
         placeholder={placeholder}
+        className={`px-5 w-full text-[14px] appearance-none focus:outline-none ${className}`}
+        {...props}
       />
-      {children || null}
-    </div>
-  )
-}
+    )
+  }
+)
+
+export const Input = React.forwardRef(
+  ({ className, classNameWrapper, children, placeholder, ...props }, ref) => {
+    return (
+      <div
+        className={`flex relative items-center text-black ${classNameWrapper}`}
+      >
+        <StyledInput
+          ref={ref}
+          className={className}
+          placeholder={placeholder}
+          {...props}
+        />
+        {children || null}
+      </div>
+    )
+  }
+)
