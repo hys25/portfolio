@@ -13,6 +13,7 @@ function NavLink({ href, name, active, className }) {
     <Link href={href} passHref>
       {xl ? (
         <a
+          href={href}
           className={`transition-colors uppercase pb-6 w-min text-[16px] hover:text-white whitespace-nowrap ${
             active ? "text-white " : "text-grey"
           } ${className}`}
