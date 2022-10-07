@@ -14,7 +14,7 @@ function Contact() {
       <form
         onSubmit={handleSearchSubmit}
         method="post"
-        className="flex fixed top-0 right-0 flex-col w-1/3 h-full"
+        className="flex fixed top-0 right-0 flex-col w-1/3 h-full md:w-full"
       >
         <div className="flex w-full h-1/3">
           <div className="flex items-end mr-1 w-1/2 h-full">

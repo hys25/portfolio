@@ -24,7 +24,7 @@ function NavMobile({ className }) {
         />
       </div>
       <div
-        className={`absolute top-[-20px] left-0 z-50 w-1/4 h-screen bg-[#2a2929]/[.5] flex flex-col justify-center transition-all ${
+        className={`absolute top-[-20px] left-0 z-50 w-1/4 h-screen bg-black/[.8] flex flex-col justify-center transition-all ${
           openNavModal ? "translate-x-0" : "translate-x-[-100%]"
         }`}
         onClick={() => setOpenNavModal(false)}
