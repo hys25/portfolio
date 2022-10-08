@@ -13,18 +13,7 @@ export const routes = [
   },
 ]
 export const routesMobile = [
-  {
-    name: "about",
-    path: "/about",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
-  {
-    name: "projects",
-    path: "/",
-  },
+  ...routes,
   {
     name: "More about this website",
     path: "/more-about-this-website",
