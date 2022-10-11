@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { NextSeo } from "next-seo"
 import { get } from "../../lib/api"
 import Default from "../../components/layout/default"
 import { NEXT_PUBLIC_BE_HOST } from "../../config"
@@ -17,6 +18,10 @@ export async function getServerSideProps() {
 function About({ skills, message, isError }) {
   return (
     <Default>
+      <NextSeo
+        title="Halyna Yavtushenko"
+        description="Frontend engineer portfolio"
+      />
       <div className="flex mx-auto w-full text-white md:flex-col mt-[150px] max-w-[1200px] md:mt-[80px]">
         {isError && <div className="text-red">{message}</div>}
         <div className="flex flex-col w-1/2 md:w-full md:text-[14px]">
