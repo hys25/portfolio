@@ -88,18 +88,18 @@ function Contact() {
           src="./../../icons/arrow-left-white.svg"
         />
       </div>
-      <div className="absolute bottom-[90px] left-[180px] w-[550px] h-[224px] text-grey font-light font-[12px] md:hidden">
+      <div className="absolute whitespace-pre-line bottom-[90px] left-[180px] w-[600px] h-[224px] text-grey font-light font-[12px] md:hidden">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(2000)
-              .typeString("Reach me out on Linkedin")
               .pauseFor(1000)
-              .deleteAll()
-              .typeString("or through the form on the right")
+              .typeString(
+                "I'm always happy to make new friends, face new challanges and to have some fun. Feel free to say hi! 👋           "
+              )
               .pauseFor(1000)
-              .deleteAll()
-              .typeString("Reach me out on Linkedin")
+              .typeString(
+                " Reach me out on Linkedin or through the form on the right 👉"
+              )
               .start()
           }}
         />

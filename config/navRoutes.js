@@ -15,7 +15,7 @@ export const routes = [
 export const routesMobile = [
   ...routes,
   {
-    name: "More about this website",
+    name: "Designed & Built by Halyna Yavtushenko",
     path: "/more-about-this-website",
   },
 ]

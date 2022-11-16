@@ -25,18 +25,28 @@ function About({ skills, message, isError }) {
       <div className="flex mx-auto w-full text-white md:flex-col mt-[150px] max-w-[1200px] md:mt-[80px]">
         {isError && <div className="text-red">{message}</div>}
         <div className="flex flex-col w-1/2 md:w-full md:text-[14px]">
-          <p>
-            I’m a Toronto-based Front-End engineer, currently working for
+          <p className="mb-5">
+            I&apos;m a Toronto-based Front-End engineer, currently working for
             Studio.gd.
           </p>
-          <p className="my-8 md:my-4">
+          <p className="mb-5">
             I have a serious passion for creating intuitive, dynamic user
             experiences, UI effects and animations. I like to resolve design
             problems, create smart user interface and imagine useful
-            interaction, developing rich web experiences & web applications. Fan
-            of art, astrology, and obsesed of dogs. Interested in the entire
-            frontend spectrum and working on ambitious projects with positive
-            people.
+            interaction, developing rich web applications.
+          </p>
+          <p className="mb-5">
+            The main area of my expertise is front-end development, HTML, CSS,
+            JS, React, Next.js, building web apps, features, animations, and
+            coding interactive responsive layouts. I also have backend
+            developement experience with Express.js.
+          </p>
+          <p className="mb-5">
+            Interested in the entire full-stack spectrum and working on
+            ambitious projects with positive people. As you probably understood
+            I&apos;m obsessed with dogs. Obviously, I can&apos;t show the
+            project&apos;s name, logos, pictures, etc, so I decided dogs can
+            help describe projects I worked on
           </p>
           <Link href="/contact" passHref>
             <a
@@ -44,18 +54,15 @@ function About({ skills, message, isError }) {
               alt="Let’s make something special"
               className="underline underline-offset-8"
             >
-              Let’s make something special !
+              Visit my LinkedIn profile for more details or just contact me !
             </a>
           </Link>
         </div>
-        <div className="w-1/2 md:pl-0 md:mt-8 md:w-full pl-[150px]">
+        <div className="w-1/2 md:pl-0 md:mt-8 md:w-full pl-[150px] font-bold">
           Skills List :
-          <div className="grid grid-cols-4 gap-5 mt-8 font-bold md:grid-cols-2 md:mt-4">
+          <div className="grid grid-cols-2 gap-5 mt-8 font-bold md:grid-cols-2 md:mt-4">
             {skills.map(({ _id, skill_name }) => (
-              <div
-                key={_id}
-                className="uppercase md:font-thin md:text-center text-grey"
-              >
+              <div key={_id} className=" md:font-thin md:text-center text-grey">
                 {skill_name}
               </div>
             ))}

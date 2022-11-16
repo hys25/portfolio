@@ -6,10 +6,10 @@ function AboutThisWebsite({ className }) {
       <Link href="/more-about-this-website" passHref>
         <a
           href="/more-about-this-website"
-          alt="More about this website"
+          alt="Designed & Built by Halyna Yavtushenko"
           className="hover:text-white text-grey text-[14px]"
         >
-          More about this website
+          Designed & Built by Halyna Yavtushenko
         </a>
       </Link>
     </div>
