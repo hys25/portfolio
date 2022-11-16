@@ -92,9 +92,9 @@ function Contact() {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(1000)
+              .pauseFor(500)
               .typeString(
-                "I'm always happy to make new friends, face new challanges and to have some fun. Feel free to say hi! 👋           "
+                "I'm always happy to make new friends, face new challenges and to have some fun. Feel free to say hi! 👋           "
               )
               .pauseFor(1000)
               .typeString(
