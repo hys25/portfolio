@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react"
+import Typewriter from "typewriter-effect"
 import Default from "../../components/layout/default"
 import { Input, Textarea } from "../../components/elements/input"
 import { post } from "../../lib/api"
@@ -14,7 +15,7 @@ function Contact() {
     formState: { errors },
   } = useForm()
   const handleSearchSubmit = async (data) => {
-    const response = await post(`${NEXT_PUBLIC_BE_HOST}/message`, data)
+    await post(`${NEXT_PUBLIC_BE_HOST}/message`, data)
     setSubmitSuccess(true)
     reset()
     setTimeout(() => {
@@ -80,6 +81,29 @@ function Contact() {
           send message
         </button>
       </form>
+      <div className="absolute bottom-[90px] left-[90px] w-[80px] h-[225px] md:hidden">
+        <img
+          alt="Arrow down"
+          className="object-contain bg-no-repeat bg-contain w-full rotate-[-10deg] animate-pulse"
+          src="./../../icons/arrow-left-white.svg"
+        />
+      </div>
+      <div className="absolute bottom-[90px] left-[180px] w-[550px] h-[224px] text-grey font-light font-[12px] md:hidden">
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .pauseFor(2000)
+              .typeString("Reach me out on Linkedin")
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("or through the form on the right")
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("Reach me out on Linkedin")
+              .start()
+          }}
+        />
+      </div>
     </Default>
   )
 }

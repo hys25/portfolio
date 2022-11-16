@@ -5,7 +5,7 @@ function Translation({ className }) {
         EN
       </div>
       <div className="text-white transition-colors cursor-pointer">UA</div> */}
-      <div className="ml-9 text-white">FRONT_END DEVELOPER</div>
+      <div className="ml-9 text-white">FRONT_END ENGINEER</div>
     </div>
   )
 }
