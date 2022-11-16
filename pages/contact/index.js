@@ -1,11 +1,25 @@
 import { useForm } from "react-hook-form"
+import { useState } from "react"
 import Default from "../../components/layout/default"
 import { Input, Textarea } from "../../components/elements/input"
+import { post } from "../../lib/api"
+import { NEXT_PUBLIC_BE_HOST } from "../../config"
 
 function Contact() {
-  const { register, handleSubmit } = useForm()
-  const handleSearchSubmit = (data) => {
-    console.log(data)
+  const [isSubmitSuccess, setSubmitSuccess] = useState(false)
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
+  const handleSearchSubmit = async (data) => {
+    const response = await post(`${NEXT_PUBLIC_BE_HOST}/message`, data)
+    setSubmitSuccess(true)
+    reset()
+    setTimeout(() => {
+      setSubmitSuccess(false)
+    }, 5000)
   }
   return (
     <Default>
@@ -17,36 +31,48 @@ function Contact() {
         <div className="flex w-full h-1/3">
           <div className="flex relative items-end mr-1 w-1/2 h-full">
             <Input
-              {...register("firstName")}
+              {...register("first_name", { required: true })}
               className="pb-3 w-full text-white h-[60px] bg-greyDark"
               placeholder="First name"
+              error={errors.first_name ? "First name is required" : null}
             />
             <div className="block absolute left-0 w-full h-full top-[-screen] z-[-1] bg-greyDark" />
           </div>
           <div className="flex relative items-end ml-1 w-1/2 h-full max-h-1/3">
             <Input
-              {...register("lastName")}
+              {...register("last_name", { required: true })}
               className="pb-3 w-full text-white h-[60px] bg-greyDark"
-              placeholder="First name"
+              placeholder="Last name"
+              error={errors.last_name ? "First name is required" : null}
             />
             <div className="block absolute left-0 w-full h-full top-[-screen] z-[-1] bg-greyDark" />
           </div>
         </div>
         <div className="flex mt-2 w-full h-[60px]">
-          <div className="w-full h-full">
+          <div className="relative w-full h-full">
             <Input
-              {...register("email")}
+              {...register("email", { required: true })}
               className="w-full h-full text-white bg-greyDark min-h-[60px]"
               placeholder="Email"
+              error={errors.email ? "First name is required" : null}
             />
           </div>
         </div>
         <div className="flex mt-2 w-full h-auto">
           <div className="relative w-full h-full">
-            <Textarea {...register("message")} placeholder="Message" />
+            <Textarea
+              {...register("message", { required: true })}
+              placeholder="Message"
+              error={errors.message ? "First name is required" : null}
+            />
             <div className="absolute top-[100%] z-1 block bg-greyDark left-0 w-full h-full" />
           </div>
         </div>
+        {isSubmitSuccess && (
+          <div className="absolute right-0 w-full text-center text-grey cursor-pointer bottom-[180px]">
+            <b>THANK YOU!</b> <div>Your message has been sent.</div>
+          </div>
+        )}
         <button
           type="submit"
           className="absolute right-0 w-full text-white uppercase cursor-pointer bottom-[90px] h-[60px] bg-grey"
