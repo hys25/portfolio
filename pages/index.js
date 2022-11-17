@@ -53,8 +53,26 @@ function Homepage({ projects, message, isError }) {
     <Default>
       <NextSeo
         title="Halyna's Yavtushenko Frontend Engineer portfolio"
-        description="Halyna's Yavtushenko Frontend Engineer portfolio"
+        description="Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
+        openGraph={{
+          url: "https://galinie.ca/",
+          title:
+            "Welcome to Halyna's Yavtushenko Frontend Engineer portfolio home page",
+          description:
+            "Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people.",
+          images: [
+            {
+              url: "https://galinie.ca/portfolio-my-picture.jpg",
+              width: 450,
+              height: 700,
+              alt: "Halyna Yavtushenko",
+              type: "image/jpeg",
+            },
+          ],
+          site_name: "Halyna Yavtushenko",
+        }}
       />
+      <h1 className="text-[0px]">Halyna Yavtushenko</h1>
       <div className="flex justify-between items-end h-full md:flex-col">
         <div>
           <div
@@ -101,9 +119,9 @@ function Homepage({ projects, message, isError }) {
               >
                 <div className="flex flex-col items-end md:justify-start md:items-start md:h-auto group h-[120px]">
                   <div className="flex flex-col cursor-pointer">
-                    <p className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white hover:text-white text-[56px] text-grey md:text-[18px]">
+                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white hover:text-white text-[56px] text-grey md:text-[18px]">
                       {project_name}
-                    </p>
+                    </h2>
                     <img
                       alt="Project's background"
                       className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-85%]"
@@ -112,9 +130,9 @@ function Homepage({ projects, message, isError }) {
                       }`}
                     />
                   </div>
-                  <p className="text-grey font-light normal-case ease-in-out md:block group-hover:text-white text-[18px] md:text-[14px]">
+                  <h3 className="font-light normal-case ease-in-out md:block group-hover:text-white text-grey text-[18px] md:text-[14px]">
                     {project_stack}
-                  </p>
+                  </h3>
                 </div>
               </Link>
             )
@@ -129,9 +147,9 @@ function Homepage({ projects, message, isError }) {
                 href={`/project#${normalizeAnchor(project_name)}`}
                 passHref
               >
-                <div className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] md:mr-[10px] md:after:hidden md:text-[16px]">
+                <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] md:mr-[10px] md:after:hidden md:text-[16px]">
                   {project_name}
-                </div>
+                </h2>
               </Link>
             ))}
           </div>

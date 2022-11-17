@@ -20,7 +20,7 @@ function About({ skills, message, isError }) {
     <Default>
       <NextSeo
         title="Page about Halyna Yavtushenko"
-        description="I'm a Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
+        description="Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
       />
       <div className="flex mx-auto w-full text-white md:flex-col mt-[150px] max-w-[1200px] md:mt-[80px]">
         {isError && <div className="text-red">{message}</div>}
@@ -58,15 +58,15 @@ function About({ skills, message, isError }) {
             </a>
           </Link>
         </div>
-        <div className="w-1/2 md:pl-0 md:mt-8 md:w-full pl-[150px] font-bold">
+        <div className="w-1/2 font-bold md:pl-0 md:mt-8 md:w-full pl-[150px]">
           Skills List :
-          <div className="grid grid-cols-2 gap-5 mt-8 font-bold md:grid-cols-2 md:mt-4">
+          <ul className="grid grid-cols-2 gap-5 mt-8 font-bold md:grid-cols-2 md:mt-4">
             {skills.map(({ _id, skill_name }) => (
-              <div key={_id} className=" md:font-thin md:text-center text-grey">
-                {skill_name}
-              </div>
+              <li key={_id} className="md:font-thin md:text-center text-grey">
+                <h2>{skill_name}</h2>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </Default>

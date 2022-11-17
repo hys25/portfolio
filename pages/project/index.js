@@ -57,13 +57,12 @@ function Project({ projects }) {
                   key={_id}
                   className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[20px] pr-[30px] md:pt-[80px] md:px-[20px]"
                 >
-                  <div className="w-full text-right text-white uppercase md:mt-0 md:text-center text-[56px] mt-[35px] md:text-[16px]">
+                  <h1 className="w-full text-right text-white uppercase md:mt-0 md:text-center text-[56px] mt-[35px] md:text-[16px]">
                     {project_name}
-                  </div>
+                  </h1>
                   <div className="flex flex-col justify-start items-start mx-auto md:mt-2 max-w-[750px] mt-[30px]">
                     <img
                       alt="Project"
-                      // style={{ transform: translateZ(0) }}
                       className="object-contain mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[450px] translate-z-0 md:h-[180px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
