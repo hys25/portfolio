@@ -14,7 +14,7 @@ const StyledInput = React.forwardRef(
 )
 
 export const Input = React.forwardRef(
-  ({ className, children, placeholder, ...props }, ref) => {
+  ({ className, children, placeholder, error = null, ...props }, ref) => {
     return (
       <>
         <StyledInput
@@ -24,19 +24,31 @@ export const Input = React.forwardRef(
           {...props}
         />
         {children || null}
+        {error && (
+          <span className="text-error text-[12px] absolute left-[20px] bottom-1 z-1">
+            {error}
+          </span>
+        )}
       </>
     )
   }
 )
 
 export const Textarea = React.forwardRef(
-  ({ placeholder, className = "", ...props }, ref) => (
-    <textarea
-      placeholder={placeholder}
-      className={`w-full h-full p-5 text-white bg-greyDark outline-none ${className}`}
-      ref={ref}
-      rows={12}
-      {...props}
-    />
+  ({ placeholder, className = "", error = null, ...props }, ref) => (
+    <>
+      <textarea
+        placeholder={placeholder}
+        className={`w-full h-full p-5 text-white bg-greyDark outline-none ${className}`}
+        ref={ref}
+        rows={12}
+        {...props}
+      />
+      {error && (
+        <span className="text-error text-[12px] absolute left-[20px] top-11 z-100">
+          {error}
+        </span>
+      )}
+    </>
   )
 )
