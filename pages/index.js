@@ -112,7 +112,7 @@ function Homepage({ projects, message, isError }) {
                       }`}
                     />
                   </div>
-                  <p className="text-black normal-case ease-in-out md:block group-hover:text-white text-[18px] md:text-[14px]">
+                  <p className="text-grey font-light normal-case ease-in-out md:block group-hover:text-white text-[18px] md:text-[14px]">
                     {project_stack}
                   </p>
                 </div>
