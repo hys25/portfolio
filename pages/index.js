@@ -1,5 +1,5 @@
-import { NextSeo } from "next-seo"
 import { useEffect, useState, useMemo } from "react"
+import { NextSeo } from "next-seo"
 import Link from "next/link"
 import Default from "../components/layout/default"
 import { get } from "../lib/api"
@@ -52,8 +52,8 @@ function Homepage({ projects, message, isError }) {
   return (
     <Default>
       <NextSeo
-        title="Halyna Yavtushenko"
-        description="Frontend engineer portfolio"
+        title="Halyna's Yavtushenko Frontend Engineer portfolio"
+        description="Halyna's Yavtushenko Frontend Engineer portfolio"
       />
       <div className="flex justify-between items-end h-full md:flex-col">
         <div>

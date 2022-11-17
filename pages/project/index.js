@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
+import { NextSeo } from "next-seo"
 import { get } from "../../lib/api"
 import Sidebar from "../../components/modules/sidebar"
 import Footer from "../../components/modules/footer"
@@ -29,6 +30,10 @@ function Project({ projects }) {
         <Sidebar className="mt-5" />
       )}
       <Footer />
+      <NextSeo
+        title="Project page"
+        description="Assets, project's stack, description and role on the project are represented on the project page "
+      />
       <ReactFullpage
         navigation
         scrollingSpeed={500}

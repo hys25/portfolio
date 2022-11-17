@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react"
+import { NextSeo } from "next-seo"
 import Typewriter from "typewriter-effect"
 import Default from "../../components/layout/default"
 import { Input, Textarea } from "../../components/elements/input"
@@ -24,6 +25,10 @@ function Contact() {
   }
   return (
     <Default>
+      <NextSeo
+        title="Contact with Halyna Yavtushenko"
+        description="Reach me out on Linkedin or through the form on the Contact page"
+      />
       <form
         onSubmit={handleSubmit(handleSearchSubmit)}
         method="post"
