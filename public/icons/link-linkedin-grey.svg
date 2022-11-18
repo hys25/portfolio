@@ -1,9 +1,1 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-	<title>link-linkedin</title>
-	<defs>
-		<image  width="60" height="54" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA2CAMAAACsuQomAAAAAXNSR0IB2cksfwAAADNQTFRFAAAA0tLSx8fHwMDAvb29ubm5ycnJra2tqKiosbGxy8vLwsLC0dHRxcXFz8/Pzc3Ntra2tDoaqQAAABF0Uk5TAB+v3OfvnP7/+4fPPMBXcPbFO0ewAAAA60lEQVR4nO3U2RKDIAwF0Aiyy/L/X9tp6xLQ1kRn+tDhPkYPoBAAAAYhRzXqAS5EGPuK83wb7JqJa/VmreJihTB7amytvoMjExuMBRNX35yYOCM7Mi2e2rD3GSDOtlywACkoV+S1s/3nGVLOuT4Jk0bJH2s5uKX1xLYr+JAsPenbWq7OoZXTF9zWom0TyTjYfSIR7+dd9Sk29jiZgj+l3MHPm+M6LkRsgvY+uqY6kLCcu7X574KCtztV1GMSsES9Ua28EDC+naqFm3PscA+malhSY6Dcwq7jjjvu+AdYU3FSKOH9hj+ozRnxowe4RDix8RU+nQAAAABJRU5ErkJggg=="/>
-	</defs>
-	<style>
-	</style>
-	<use id="Background" href="#img1" x="0" y="3"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" version="1.2" viewBox="0 0 60 60"><title>link-linkedin</title><defs><image id="a" width="60" height="54" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA2CAMAAACsuQomAAAAAXNSR0IB2cksfwAAADNQTFRFAAAA0tLSx8fHwMDAvb29ubm5ycnJra2tqKiosbGxy8vLwsLC0dHRxcXFz8/Pzc3Ntra2tDoaqQAAABF0Uk5TAB+v3OfvnP7/+4fPPMBXcPbFO0ewAAAA60lEQVR4nO3U2RKDIAwF0Aiyy/L/X9tp6xLQ1kRn+tDhPkYPoBAAAAYhRzXqAS5EGPuK83wb7JqJa/VmreJihTB7amytvoMjExuMBRNX35yYOCM7Mi2e2rD3GSDOtlywACkoV+S1s/3nGVLOuT4Jk0bJH2s5uKX1xLYr+JAsPenbWq7OoZXTF9zWom0TyTjYfSIR7+dd9Sk29jiZgj+l3MHPm+M6LkRsgvY+uqY6kLCcu7X574KCtztV1GMSsES9Ua28EDC+naqFm3PscA+malhSY6Dcwq7jjjvu+AdYU3FSKOH9hj+ozRnxowe4RDix8RU+nQAAAABJRU5ErkJggg=="/></defs><use y="3" href="#a"/></svg>

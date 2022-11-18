@@ -1,9 +1,1 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72">
-	<title>link-github</title>
-	<defs>
-		<image  width="54" height="58" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA6CAMAAADMWVqUAAAAAXNSR0IB2cksfwAAADNQTFRFAAAA2dnZsrKywcHB1NTU3t7e0dHRuLi44ODgvLy8qKiora2t19fXxcXF3NzcycnJzc3NxfjpmgAAABF0Uk5TAJT/+MFU0v0t+///rfJ36uDw3S3VAAABb0lEQVR4nOWW3bqFEBCGjUwaKu7/ateSsijyc7af/R2WlxnGNxg7BZxPAtmrcJZcLsknUk70AoIfIpKPWqkbiE5h7pXOAVtM7SpoY2A2eU2jOE3zjhR+yyQC1SodY2szpmJMjGGDQWIzRskB8FbMxNQyhlF9/KV5aCOVxv4QnWhksa+uQpV9mO09NC/ZWyJeeig1pfxe2r+ADebWjfmd3OsDE50HsHRiV1F2Ftd15UwfBt0G5MTDNe2K8mfnPcvpqL1M7ZiNLAibbWGKnYuBrhNO8tYBoWm9Z9/ErU79PBIhdEyonMP069vOfnjox2iKoZJNmv1xRyNjx9XSjZVGQPpA+Eq4PUzaz92kzR3x8+sk2YxJQJZzpRWXzCO/LYsdF4cHLtP+H5n5ZFyYfI0muWnPL+ezkTOAyB6ByGM1EypgNYctYey9IIvYu8eWMYaCjjvHM3vygh2oe0Fm4q1gpTT/O5Z5tlWxBSx/imx6Bz6PYVEWcd4LdQAAAABJRU5ErkJggg=="/>
-	</defs>
-	<style>
-	</style>
-	<use id="Background" href="#img1" x="9" y="7"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" version="1.2" viewBox="0 0 72 72"><title>link-github</title><defs><image id="a" width="54" height="58" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA6CAMAAADMWVqUAAAAAXNSR0IB2cksfwAAADNQTFRFAAAA2dnZsrKywcHB1NTU3t7e0dHRuLi44ODgvLy8qKiora2t19fXxcXF3NzcycnJzc3NxfjpmgAAABF0Uk5TAJT/+MFU0v0t+///rfJ36uDw3S3VAAABb0lEQVR4nOWW3bqFEBCGjUwaKu7/ateSsijyc7af/R2WlxnGNxg7BZxPAtmrcJZcLsknUk70AoIfIpKPWqkbiE5h7pXOAVtM7SpoY2A2eU2jOE3zjhR+yyQC1SodY2szpmJMjGGDQWIzRskB8FbMxNQyhlF9/KV5aCOVxv4QnWhksa+uQpV9mO09NC/ZWyJeeig1pfxe2r+ADebWjfmd3OsDE50HsHRiV1F2Ftd15UwfBt0G5MTDNe2K8mfnPcvpqL1M7ZiNLAibbWGKnYuBrhNO8tYBoWm9Z9/ErU79PBIhdEyonMP069vOfnjox2iKoZJNmv1xRyNjx9XSjZVGQPpA+Eq4PUzaz92kzR3x8+sk2YxJQJZzpRWXzCO/LYsdF4cHLtP+H5n5ZFyYfI0muWnPL+ezkTOAyB6ByGM1EypgNYctYey9IIvYu8eWMYaCjjvHM3vygh2oe0Fm4q1gpTT/O5Z5tlWxBSx/imx6Bz6PYVEWcd4LdQAAAABJRU5ErkJggg=="/></defs><use x="9" y="7" href="#a"/></svg>

@@ -1,4 +1,1 @@
-<svg width="20" height="7" viewBox="0 0 20 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="20" height="0.999998" transform="translate(20 1) rotate(-180)" fill="white"/>
-<rect width="20" height="0.999998" transform="translate(20 7) rotate(-180)" fill="white"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="7" fill="none" viewBox="0 0 20 7"><path fill="#fff" d="M20 1H0V0h20zm0 6H0V6h20z"/></svg>

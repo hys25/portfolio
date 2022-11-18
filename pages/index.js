@@ -68,7 +68,7 @@ function Homepage({ projects, message, isError }) {
               type: "image/jpeg",
             },
           ],
-          site_name: "Halyna Yavtushenko",
+          site_name: "Front-End Engineer portfolio - Halyna Yavtushenko",
         }}
       />
       <h1 className="text-[0px]">Halyna Yavtushenko</h1>
@@ -108,6 +108,7 @@ function Homepage({ projects, message, isError }) {
               _id,
               project_name,
               project_stack,
+              project_description,
               background_image_url,
               main_image_url,
             }) => (
@@ -135,6 +136,7 @@ function Homepage({ projects, message, isError }) {
                   <h3 className="font-light normal-case ease-in-out md:block group-hover:text-white text-grey text-[18px] md:text-[14px]">
                     {project_stack}
                   </h3>
+                  <p className="text-[0px]">{project_description}</p>
                 </a>
               </Link>
             )

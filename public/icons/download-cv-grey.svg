@@ -1,9 +1,1 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-	<title>download-cv</title>
-	<defs>
-		<image  width="58" height="60" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA8CAMAAAAAPFkHAAAAAXNSR0IB2cksfwAAADNQTFRFAAAA0dHRsbGxqKiowMDAz8/Pvb29ubm5ra2tx8fHxcXF0tLSzc3NwsLCtra2y8vLycnJtLMLjwAAABF0Uk5TADz7/9xX5+/+r8AfcM/2h5x31MVIAAAAzklEQVR4nO3V2w6DMAgGYHq0tvXw/k87NzudChRvlpj0vyR8GosKAB6lTYlWRAsVa7bYRhtttNFGn0Cd79aEnepS6hxLtWGiWRo4aljaczLyD2tpWT0uT0lfk5CIk5KsWYVa2YJ2yDEH4WrPV5plEhlRL5UA8SgrAz1m+JXDHQkw7nK8JyFtVieyp3xR06n+He9loLkABapcfD5fUwX8VZgLYOjaQ5QrdGkKaFVA8TT6f+qjMP5Cb+eBtLKhyLzXXqy3Yfn8JGd2qRL3XOQL/+ATLiUm1YgAAAAASUVORK5CYII="/>
-	</defs>
-	<style>
-	</style>
-	<use id="Background" href="#img1" x="1" y="0"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" version="1.2" viewBox="0 0 60 60"><title>download-cv</title><defs><image id="a" width="58" height="60" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA8CAMAAAAAPFkHAAAAAXNSR0IB2cksfwAAADNQTFRFAAAA0dHRsbGxqKiowMDAz8/Pvb29ubm5ra2tx8fHxcXF0tLSzc3NwsLCtra2y8vLycnJtLMLjwAAABF0Uk5TADz7/9xX5+/+r8AfcM/2h5x31MVIAAAAzklEQVR4nO3V2w6DMAgGYHq0tvXw/k87NzudChRvlpj0vyR8GosKAB6lTYlWRAsVa7bYRhtttNFGn0Cd79aEnepS6hxLtWGiWRo4aljaczLyD2tpWT0uT0lfk5CIk5KsWYVa2YJ2yDEH4WrPV5plEhlRL5UA8SgrAz1m+JXDHQkw7nK8JyFtVieyp3xR06n+He9loLkABapcfD5fUwX8VZgLYOjaQ5QrdGkKaFVA8TT6f+qjMP5Cb+eBtLKhyLzXXqy3Yfn8JGd2qRL3XOQL/+ATLiUm1YgAAAAASUVORK5CYII="/></defs><use x="1" href="#a"/></svg>
