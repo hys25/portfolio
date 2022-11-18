@@ -52,14 +52,14 @@ function Homepage({ projects, message, isError }) {
   return (
     <Default>
       <NextSeo
-        title="Halyna's Yavtushenko Frontend Engineer portfolio"
-        description="Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
+        title="Frontend Engineer portfolio - Halyna Yavtushenko"
+        description="Toronto-based Front-End engineer. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
         openGraph={{
           url: "https://galinie.ca/",
           title:
             "Welcome to Halyna's Yavtushenko Frontend Engineer portfolio home page",
           description:
-            "Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people.",
+            "Toronto-based Front-End engineer. Interested in the entire full-stack spectrum and working on ambitious projects with positive people.",
           images: [
             {
               url: "https://galinie.ca/portfolio-my-picture.jpg",
@@ -117,7 +117,10 @@ function Homepage({ projects, message, isError }) {
                 href={`/project#${normalizeAnchor(project_name)}`}
                 passHref
               >
-                <div className="flex flex-col items-end md:justify-start md:items-start md:h-auto group h-[120px]">
+                <a
+                  className="flex flex-col items-end md:justify-start md:items-start md:h-auto group h-[120px]"
+                  href={`/project#${normalizeAnchor(project_name)}`}
+                >
                   <div className="flex flex-col cursor-pointer">
                     <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white hover:text-white text-[56px] text-grey md:text-[18px]">
                       {project_name}
@@ -133,7 +136,7 @@ function Homepage({ projects, message, isError }) {
                   <h3 className="font-light normal-case ease-in-out md:block group-hover:text-white text-grey text-[18px] md:text-[14px]">
                     {project_stack}
                   </h3>
-                </div>
+                </a>
               </Link>
             )
           )}

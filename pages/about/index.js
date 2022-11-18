@@ -20,7 +20,7 @@ function About({ skills, message, isError }) {
     <Default>
       <NextSeo
         title="Page about Halyna Yavtushenko"
-        description="Toronto-based Front-End engineer with over 2 years of experience. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
+        description="Toronto-based Front-End engineer. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
       />
       <div className="flex mx-auto w-full text-white md:flex-col mt-[150px] max-w-[1200px] md:mt-[80px]">
         {isError && <div className="text-red">{message}</div>}
