@@ -56,8 +56,7 @@ function Homepage({ projects, message, isError }) {
         description="Toronto-based Front-End engineer. Interested in the entire full-stack spectrum and working on ambitious projects with positive people."
         openGraph={{
           url: "https://galinie.ca/",
-          title:
-            "Welcome to Halyna's Yavtushenko Frontend Engineer portfolio home page",
+          title: "Front-End Engineer portfolio - Halyna Yavtushenko",
           description:
             "Toronto-based Front-End engineer. Interested in the entire full-stack spectrum and working on ambitious projects with positive people.",
           images: [
