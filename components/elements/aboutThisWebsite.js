@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Link from "next/link"
 
-function AboutThisWebsite({ className }) {
+function AboutThisWebsite({ className = "" }) {
   const router = useRouter()
   const [isSubmitSuccess, setSubmitSuccess] = useState(false)
   useEffect(() => {
@@ -11,7 +11,7 @@ function AboutThisWebsite({ className }) {
     }
   }, [setSubmitSuccess, router])
   return (
-    <div className={`flex justify-center ${className}`}>
+    <div className={`flex justify-center m-auto ${className}`}>
       <Link href="/more-about-this-website" passHref>
         <a
           href="/more-about-this-website"

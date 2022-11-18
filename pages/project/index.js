@@ -47,7 +47,6 @@ function Project({ projects }) {
                 _id,
                 project_name,
                 main_image_url,
-                background_image_url,
                 project_description,
                 project_stack,
                 your_impact,
@@ -57,37 +56,45 @@ function Project({ projects }) {
                   key={_id}
                   className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[20px] pr-[30px] md:pt-[80px] md:px-[20px]"
                 >
-                  <h1 className="w-full text-right text-white uppercase md:mt-0 md:text-center text-[56px] mt-[35px] md:text-[16px]">
+                  <h1 className="w-full text-right text-white uppercase md:mt-0 md:text-center text-[56px] leading-[56px] mt-[25px] md:text-[16px]">
                     {project_name}
                   </h1>
-                  <div className="flex flex-col justify-start items-start mx-auto md:mt-2 max-w-[750px] mt-[30px]">
+                  <div className="flex flex-col justify-start items-start mx-auto md:mt-2 max-w-[1000px] mt-[30px]">
                     <img
                       alt="Project"
-                      className="object-contain mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[450px] translate-z-0 md:h-[180px]"
+                      className="object-cover mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[350px] translate-z-0 md:h-[180px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
-                    {background_image_url && (
+                    {/* {background_image_url && (
                       <img
                         alt="Project background"
                         className="object-contain absolute w-full md:hidden top-[170px] left-[70px] max-w-[1000px] z-[-1] max-h-[700px]"
                         src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                       />
-                    )}
-                    <div className="mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
-                      <span className="mr-2 text-grey">
+                    )} */}
+                    <div className="flex mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
+                      <span className="min-w-[150px] text-grey whitespace-nowrap">
                         Project description:
                       </span>
-                      {project_description}
+                      <p className="w-full whitespace-pre-wrap">
+                        {project_description}
+                      </p>
                     </div>
-                    <div className="mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
-                      <span className="mr-2 text-grey">Project stack:</span>
-                      {project_stack}
+                    <div className="flex mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
+                      <span className="min-w-[150px] text-grey whitespace-nowrap">
+                        Project stack:
+                      </span>
+                      <p className="w-full whitespace-pre-wrap">
+                        {project_stack}
+                      </p>
                     </div>
-                    <div className="mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
-                      <span className="mr-2 text-grey">
+                    <div className="flex mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
+                      <span className="min-w-[150px] text-grey whitespace-nowrap">
                         My role on project:
                       </span>
-                      {your_impact}
+                      <p className="w-full whitespace-pre-wrap">
+                        {your_impact}
+                      </p>
                     </div>
                   </div>
                   <img

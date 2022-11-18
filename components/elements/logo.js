@@ -9,10 +9,10 @@ function Logo({ className }) {
         url="https://galinie.ca/"
       />
       <Link href="/">
-        <a href="/" className={`flex items-end ${className}`}>
+        <a href="/" className={`flex items-end ml-2 mb-[20px] ${className}`}>
           <img
             alt="Logo"
-            className="object-contain bg-no-repeat bg-contain w-[97px] h-[100px] max-h-[200px] md:right-[1px]"
+            className="object-contain bg-no-repeat bg-contain w-[100px] h-[80px] md:right-[1px]"
             src="./../../icons/logo-galinie.svg"
           />
         </a>
