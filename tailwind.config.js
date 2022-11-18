@@ -26,7 +26,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Roboto", ...defaultTheme.fontFamily.sans],
-        fancy: ["Caveat"],
       },
       display: ["group-hover"],
       colors: {

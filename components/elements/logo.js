@@ -12,12 +12,9 @@ function Logo({ className }) {
         <a href="/" className={`flex items-end ${className}`}>
           <img
             alt="Logo"
-            className="object-contain bg-no-repeat bg-contain w-[70px] h-[100px] max-h-[200px] md:right-[1px]"
-            src="./../../icons/logo-g.svg"
+            className="object-contain bg-no-repeat bg-contain w-[97px] h-[100px] max-h-[200px] md:right-[1px]"
+            src="./../../icons/logo-galinie.svg"
           />
-          <span className="text-4xl tracking-wider ml-[-15px] text-neutral-50 font-fancy md:text-[28px]">
-            alinie
-          </span>
         </a>
       </Link>
     </>
