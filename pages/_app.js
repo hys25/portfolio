@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
       <DefaultSeo {...SEO} />
       <Head>
         <link rel="shortcut icon" href="/icons/logo-g.svg" />
-        <link rel="apple-touch-icon" href="/icons/logo-g.svg"></link>
+        <link rel="apple-touch-icon" href="/icons/logo-g.svg" />
       </Head>
       <Component {...pageProps} />
     </MediaProvider>
