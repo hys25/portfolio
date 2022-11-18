@@ -25,7 +25,7 @@ export const Input = React.forwardRef(
         />
         {children || null}
         {error && (
-          <span className="text-error text-[12px] absolute left-[20px] bottom-1 z-1">
+          <span className="absolute bottom-1 text-error text-[12px] left-[20px] z-1">
             {error}
           </span>
         )}
@@ -45,7 +45,7 @@ export const Textarea = React.forwardRef(
         {...props}
       />
       {error && (
-        <span className="text-error text-[12px] absolute left-[20px] top-11 z-100">
+        <span className="absolute top-11 text-error text-[12px] left-[20px] z-100">
           {error}
         </span>
       )}

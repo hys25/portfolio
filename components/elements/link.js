@@ -20,7 +20,7 @@ function NavLink({ href, name, active, className }) {
         >
           {name}
           {active && (
-            <div className="absolute top left-[10px] block bg-white h-[70%] w-[1px]" />
+            <div className="absolute top left-[10px] block bg-white h-[70%] w-[0.5px]" />
           )}
         </a>
       ) : (
@@ -31,7 +31,7 @@ function NavLink({ href, name, active, className }) {
         >
           {name}
           {active && (
-            <div className="absolute top-2 left-[10px] block bg-white h-[70%] w-[1px]" />
+            <div className="absolute top-2 left-[10px] block bg-white h-[70%] w-[0.5px]" />
           )}
         </StyledLink>
       )}

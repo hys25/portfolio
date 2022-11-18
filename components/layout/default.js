@@ -13,7 +13,7 @@ function Default({ children }) {
   }, [])
 
   return (
-    <div className="relative flex flex-col justify-between pt-5 pr-10 w-screen h-screen md:justify-start md:px-5 md:min-h-screen bg-neutral-900 pb-[70px] pl-[190px] md:py-[20px] md:min-w-screen">
+    <div className="flex relative flex-col justify-between pt-5 pr-10 w-screen h-screen md:justify-start md:px-5 md:min-h-screen bg-neutral-900 pb-[70px] pl-[190px] md:py-[20px] md:min-w-screen">
       {isNdaMessageInStorage ? (
         <div className="absolute top-[10px] right-[calc(50%-380px)] z-10 flex items-end text-white">
           <img

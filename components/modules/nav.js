@@ -2,7 +2,7 @@ import { useRouter } from "next/router"
 import { NavLink } from "../elements/link"
 import { routes } from "../../config/navRoutes"
 
-function Nav({ className }) {
+function Nav({ className = "" }) {
   const router = useRouter()
 
   return (

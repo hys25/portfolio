@@ -1,11 +1,17 @@
+import { NextSeo } from "next-seo"
 import Default from "../../components/layout/default"
 
 function MoreAboutThisWebsite() {
   return (
     <Default>
+      <NextSeo
+        title="Tech description of portfolio"
+        description="This portfolio was fully designed and built by Halyna Yavtushenko. It consists of 3 repositories: website, admin and backend. For the website used Next.js framework. For admin - React library, Redux + RTK Query, Tailwind. For server-side - Express.js"
+      />
       <div className="flex mx-auto w-full text-white md:flex-col mt-[150px] max-w-[1200px] md:mt-[80px]">
         <div className="flex flex-col w-2/3 md:mb-4 md:m-full">
           <div className="mb-8 pr-[150px]">
+            <h2 className="mb-4 font-bold">More about this website:</h2>
             <p className="mb-4">
               I built my portfolio website from scratch. It includes UI/UX
               design prototyping in the figma, planning system architecture and
@@ -36,7 +42,7 @@ function MoreAboutThisWebsite() {
           <a
             target="_blank"
             rel="noreferrer"
-            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-5 after:h-5 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-25px] after:bottom-[2px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
+            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-4 after:h-4 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-18px] after:bottom-[3px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
             href="https://www.figma.com/file/KHucTlorfsmQ6HjGfASXjZ/Halyna's-portfolio?node-id=0%3A1&t=Fobk5jR6owqdwez3-0"
           >
             Figma markup
@@ -44,7 +50,7 @@ function MoreAboutThisWebsite() {
           <a
             target="_blank"
             rel="noreferrer"
-            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-5 after:h-5 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-25px] after:bottom-[2px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
+            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-4 after:h-4 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-18px] after:bottom-[3px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
             href="https://github.com/hys25/portfolio"
           >
             This website repository
@@ -52,7 +58,7 @@ function MoreAboutThisWebsite() {
           <a
             target="_blank"
             rel="noreferrer"
-            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-5 after:h-5 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-25px] after:bottom-[2px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
+            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-4 after:h-4 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-18px] after:bottom-[3px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
             href="https://github.com/hys25/portfolio-admin"
           >
             Admin repository
@@ -60,7 +66,7 @@ function MoreAboutThisWebsite() {
           <a
             target="_blank"
             rel="noreferrer"
-            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-5 after:h-5 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-25px] after:bottom-[2px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
+            className="w-max flex relative mb-4 text-grey transition-all hover:text-white after:absolute after:inline-block after:w-4 after:h-4 after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-18px] after:bottom-[3px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')]"
             href="https://github.com/hys25/portfolio-backend"
           >
             Backend repository
@@ -68,13 +74,23 @@ function MoreAboutThisWebsite() {
         </div>
 
         <div className="flex flex-col w-1/3 md:m-full">
-          <p className="font-bold">Full Features List :</p>
+          <h1 className="font-bold">Project stack :</h1>
           <ul className="text-grey">
-            <li className="mt-4">React</li>
-            <li className="mt-4">Next.js</li>
-            <li className="mt-4">Express.js</li>
-            <li className="mt-4">Mongo DB</li>
-            <li className="mt-4">Tailwind</li>
+            <li className="mt-4">
+              <h2>React</h2>
+            </li>
+            <li className="mt-4">
+              <h2>Next.js</h2>
+            </li>
+            <li className="mt-4">
+              <h2>Express.js</h2>
+            </li>
+            <li className="mt-4">
+              <h2>Mongo DB</h2>
+            </li>
+            <li className="mt-4">
+              <h2>Tailwind</h2>
+            </li>
           </ul>
         </div>
       </div>
