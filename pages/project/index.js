@@ -76,7 +76,7 @@ function Project({ projects }) {
                       <span className="min-w-[150px] text-grey whitespace-nowrap">
                         Project description:
                       </span>
-                      <p className="w-full whitespace-pre-wrap">
+                      <p className="w-full whitespace-pre-wrap font-thin">
                         {project_description}
                       </p>
                     </div>
@@ -84,7 +84,7 @@ function Project({ projects }) {
                       <span className="min-w-[150px] text-grey whitespace-nowrap">
                         Project stack:
                       </span>
-                      <p className="w-full whitespace-pre-wrap">
+                      <p className="w-full whitespace-pre-wrap font-thin">
                         {project_stack}
                       </p>
                     </div>
@@ -92,7 +92,7 @@ function Project({ projects }) {
                       <span className="min-w-[150px] text-grey whitespace-nowrap">
                         My role on project:
                       </span>
-                      <p className="w-full whitespace-pre-wrap">
+                      <p className="w-full whitespace-pre-wrap font-thin">
                         {your_impact}
                       </p>
                     </div>

@@ -26,8 +26,9 @@ function About({ skills, message, isError }) {
         {isError && <div className="text-red">{message}</div>}
         <div className="flex flex-col w-1/2 md:w-full md:text-[14px]">
           <p className="mb-5">
-            I&apos;m a Toronto-based Front-End engineer, currently working for
-            Studio.gd.
+            I&apos;m a Toronto-based
+            <span className="bg-greyDark"> Front-End engineer</span>, currently
+            working for Studio.gd.
           </p>
           <p className="mb-5">
             I have a serious passion for creating intuitive, dynamic user
@@ -36,17 +37,25 @@ function About({ skills, message, isError }) {
             interaction, developing rich web applications.
           </p>
           <p className="mb-5">
-            The main area of my expertise is front-end development, HTML, CSS,
-            JS, React, Next.js, building web apps, features, animations, and
-            coding interactive responsive layouts. I also have backend
-            developement experience with Express.js.
+            The main area of my expertise is{" "}
+            <span className="bg-greyDark"> front-end development</span>, HTML,
+            CSS, JS, <span className="bg-greyDark"> React, Next.js</span>,
+            building web apps, features, animations, and coding interactive
+            responsive layouts. I also have
+            <span className="bg-greyDark">
+              {" "}
+              backend developement experience{" "}
+            </span>
+            with Express.js.
           </p>
           <p className="mb-5">
-            Interested in the entire full-stack spectrum and working on
-            ambitious projects with positive people. As you probably understood
-            I&apos;m obsessed with dogs. Obviously, I can&apos;t show the
-            project&apos;s name, logos, pictures, etc, so I decided dogs can
-            help describe projects I worked on
+            Interested in the entire
+            <span className="bg-greyDark"> full-stack</span> spectrum and
+            working on ambitious projects with{" "}
+            <span className="bg-greyDark"> positive people </span>. As you
+            probably understood I&apos;m obsessed with dogs. Obviously, I
+            can&apos;t show the project&apos;s name, logos, pictures, etc, so I
+            decided dogs can help describe projects I worked on
           </p>
           <Link href="/contact" passHref>
             <a

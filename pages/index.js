@@ -71,7 +71,9 @@ function Homepage({ projects, message, isError }) {
           site_name: "Front-End Engineer portfolio - Halyna Yavtushenko",
         }}
       />
-      <h1 className="text-[0px]">Halyna Yavtushenko</h1>
+      <h1 className="text-[0px]">
+        Front-End Engineer portfolio - Halyna Yavtushenko
+      </h1>
       <div className="flex justify-between items-end h-full md:flex-col">
         <div>
           <div
@@ -147,20 +149,23 @@ function Homepage({ projects, message, isError }) {
             <span className="normal-case cursor-pointer md:font-thin text-[20px] text-grey md:mr-[10px] md:text-[16px]">
               Other projects:
             </span>
-            {otherProjects.map(({ _id, project_name, project_description }) => (
-              <Link
-                key={_id}
-                href={`/project#${normalizeAnchor(project_name)}`}
-                passHref
-              >
-                <a href={`/project#${normalizeAnchor(project_name)}`}>
-                  <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[10px] md:mr-[10px] md:after:hidden md:text-[16px]">
-                    {project_name}
-                  </h2>
-                  <p className="text-[0px]">{project_description}</p>
-                </a>
-              </Link>
-            ))}
+            {otherProjects.map(
+              ({ _id, project_name, project_description, your_impact }) => (
+                <Link
+                  key={_id}
+                  href={`/project#${normalizeAnchor(project_name)}`}
+                  passHref
+                >
+                  <a href={`/project#${normalizeAnchor(project_name)}`}>
+                    <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[13px] md:mr-[10px] md:after:hidden md:text-[16px]">
+                      {project_name}
+                    </h2>
+                    <p className="text-[0px]">{project_description}</p>
+                    <p className="text-[0px]">{your_impact}</p>
+                  </a>
+                </Link>
+              )
+            )}
           </div>
         </div>
       </div>
