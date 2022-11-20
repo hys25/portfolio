@@ -5,7 +5,10 @@ function Translation({ className }) {
         EN
       </div>
       <div className="text-white transition-colors cursor-pointer">UA</div> */}
-      <div className="ml-7 text-white text-[14px]">FRONT_END ENGINEER</div>
+      <div className="flex ml-7 text-white text-[14px]">
+        FRONT_END ENGINEER
+        <span className="text-white animate-pulse">_</span>
+      </div>
     </div>
   )
 }
