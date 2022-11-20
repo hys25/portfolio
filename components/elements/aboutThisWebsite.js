@@ -16,7 +16,7 @@ function AboutThisWebsite({ className = "" }) {
         <a
           href="/more-about-this-website"
           alt="Designed & Built by Halyna Yavtushenko"
-          className={`relative w-max flex text-[14px] transition-all hover:text-white after:absolute after:inline-block after:w-[14px] after:h-[14px] after:bg-[url('/icons/arrow-top-right-grey.svg')] after:right-[-16px] after:bottom-[3px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')] ${
+          className={`relative w-max flex items-center text-[14px] transition-all hover:text-white after:absolute after:inline-block after:w-[14px] after:h-[14px] after:right-0 after:bottom-[3px] after:bg-no-repeat after:bg-contain hover:after:bg-[url('/icons/arrow-top-right-white.svg')] ${
             isSubmitSuccess
               ? "text-white after:bg-[url('/icons/arrow-top-right-white.svg')]"
               : "text-grey"
@@ -26,6 +26,11 @@ function AboutThisWebsite({ className = "" }) {
           {isSubmitSuccess && (
             <div className="absolute bottom-[8px] left-[10px] block bg-white h-[0.5px] w-[90%]" />
           )}
+          <img
+            alt="Arrow"
+            className="object-contain bg-no-repeat bg-contain w-[14px] h-[14px]"
+            src="./../../icons/arrow-top-right-grey.svg"
+          />
         </a>
       </Link>
     </div>
