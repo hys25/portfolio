@@ -5,7 +5,7 @@ import SocialLinks from "../elements/socialLinks"
 import DownloadCv from "../elements/downloadCv"
 import { routesMobile } from "../../config/navRoutes"
 
-function NavMobile({ className }) {
+function NavMobile({ className = '' }) {
   const [openNavModal, setOpenNavModal] = useState(false)
   return (
     <div className={`fixed left-0 h-auto w-screen z-[1] ${className}`}>
@@ -15,7 +15,7 @@ function NavMobile({ className }) {
         onKeyDown={() => setOpenNavModal(!openNavModal)}
         role="button"
         tabIndex={0}
-        className="flex absolute justify-center items-center cursor-pointer top-[5px] right-[20px] h-[30px] w-[30px]"
+        className="flex absolute justify-center items-center cursor-pointer top-[5px] right-[20px] h-[30px] w-[30px] md:top-[20px]"
       >
         <img
           alt="Arrow down"
@@ -31,13 +31,13 @@ function NavMobile({ className }) {
         role="presentation"
       />
       <div
-        className={`absolute top-[-20px] right-0 z-50 w-3/4 h-screen bg-[#2a2929] flex flex-col justify-center transition-all ${
+        className={`absolute top-[-20px] right-0 z-50 w-3/4 h-screen bg-[#2a2929] flex flex-col justify-center transition-all md:top-[-45px] ${
           openNavModal ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
         <img
           alt="Arrow down"
-          className="object-contain absolute bg-no-repeat bg-contain top-[30px] right-[20px] w-[20px]"
+          className="object-contain absolute bg-no-repeat bg-contain top-[30px] right-[20px] w-[20px] md:top-[70px] md:right-[25px]"
           src="./../../icons/close-nav-cross.svg"
           onClick={() => setOpenNavModal(false)}
           onKeyDown={() => setOpenNavModal(false)}
