@@ -5,7 +5,7 @@ import SocialLinks from "../elements/socialLinks"
 import DownloadCv from "../elements/downloadCv"
 import { routesMobile } from "../../config/navRoutes"
 
-function NavMobile({ className = '' }) {
+function NavMobile({ className = "" }) {
   const [openNavModal, setOpenNavModal] = useState(false)
   return (
     <div className={`fixed left-0 h-auto w-screen z-[1] ${className}`}>
