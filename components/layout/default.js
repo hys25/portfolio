@@ -13,7 +13,7 @@ function Default({ children }) {
   }, [])
 
   return (
-    <div className="flex relative flex-col justify-between pt-5 pr-10 w-screen h-screen md:justify-start md:px-5 md:min-h-screen bg-neutral-900 pb-[70px] pl-[190px] md:pb-[20px] md:pt-[45px] md:min-w-screen md:w-full">
+    <div className="flex relative flex-col justify-between pt-5 pr-10 w-screen h-screen md:justify-start md:px-5 md:w-full md:min-h-screen bg-neutral-900 pb-[70px] pl-[190px] md:pb-[20px] md:pt-[45px] md:min-w-screen">
       {isNdaMessageInStorage ? (
         <div className="absolute top-[10px] right-[calc(50%-380px)] z-10 flex items-end text-white md:top-[5px] md:right-0 md:items-start md:px-5">
           <img
@@ -21,7 +21,7 @@ function Default({ children }) {
             className="object-contain bg-no-repeat bg-contain w-[20px] h-[20px] max-h-[200px] md:right-[1px] md:max-h-[auto] md:w-[14px] md:h-[14px] md:opacity-[0.5]"
             src="./../../icons/paw-white.svg"
           />
-          <p className="ml-2 text-[14px] md:text-[10px] md:ml-[3px] md:text-center md:font-thin md:text-grey">
+          <p className="ml-2 md:font-thin md:text-center text-[14px] md:text-[10px] md:ml-[3px] md:text-grey">
             Due to NDA, I can&apos;t use assets from projects I&apos;ve worked
             on, so I decided that dogs can help me to fill the gaps
           </p>
@@ -33,7 +33,7 @@ function Default({ children }) {
             className="object-contain bg-no-repeat bg-contain w-[20px] h-[20px] max-h-[200px] md:right-[1px] md:w-[14px] md:h-[14px] md:opacity-[0.5]"
             src="./../../icons/paw-white.svg"
           />
-          <p className="ml-2 text-[14px] md:text-[10px] md:ml-[3px] md:text-center md:font-thin md:text-grey">
+          <p className="ml-2 md:font-thin md:text-center text-[14px] md:text-[10px] md:ml-[3px] md:text-grey">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter

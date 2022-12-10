@@ -3,7 +3,7 @@ import AboutThisWebsite from "../elements/aboutThisWebsite"
 
 function Footer() {
   return (
-    <div className="fixed flex w-full md:hidden mt-[55px] bottom-[20px] left-[30px] z-[1]">
+    <div className="flex fixed w-full md:hidden mt-[55px] bottom-[20px] left-[30px] z-[1]">
       <Translation />
       <AboutThisWebsite />
     </div>

@@ -74,8 +74,8 @@ function Homepage({ projects, message, isError }) {
       <h1 className="text-[0px]">
         Front-End Engineer portfolio - Halyna Yavtushenko
       </h1>
-      <div className="flex justify-between items-end h-full md:flex-col">
-        <div>
+      <div className="flex justify-between items-end h-full">
+        <div className="md:hidden">
           <div
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
@@ -125,12 +125,12 @@ function Homepage({ projects, message, isError }) {
                   href={`/project#${normalizeAnchor(project_name)}`}
                 >
                   <div className="flex flex-col cursor-pointer">
-                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white hover:text-white text-[56px] text-grey md:text-[18px]">
+                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight">
                       {project_name}
                     </h2>
                     <img
                       alt="Project's background"
-                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-85%]"
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-85%] md:group-hover:hidden"
                       src={`${NEXT_PUBLIC_BE_HOST}/${
                         background_image_url || main_image_url
                       }`}
@@ -157,7 +157,7 @@ function Homepage({ projects, message, isError }) {
                   passHref
                 >
                   <a href={`/project#${normalizeAnchor(project_name)}`}>
-                    <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[13px] md:mr-[10px] md:after:hidden md:text-[16px]">
+                    <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[13px] md:mr-[10px] md:after:hidden md:text-[16px] md:text-greyLight">
                       {project_name}
                     </h2>
                     <p className="text-[0px]">{project_description}</p>

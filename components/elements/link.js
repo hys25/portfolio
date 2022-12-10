@@ -7,7 +7,7 @@ const StyledLink = styled.a`
   text-orientation: upright;
 `
 
-function NavLink({ href, name, active, className }) {
+function NavLink({ href, name, active, className = "" }) {
   const { xl } = useMedia()
   return (
     <Link href={href} passHref>

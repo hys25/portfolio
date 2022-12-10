@@ -72,27 +72,27 @@ function Project({ projects }) {
                         src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                       />
                     )} */}
-                    <div className="flex mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
-                      <span className="min-w-[150px] text-grey whitespace-nowrap">
+                    <div className="flex mb-4 text-white md:flex-col md:mb-2 md:font-thin md:text-[14px]">
+                      <span className="whitespace-nowrap min-w-[150px] text-grey">
                         Project description:
                       </span>
-                      <p className="w-full whitespace-pre-wrap font-thin">
+                      <p className="w-full font-thin whitespace-pre-wrap">
                         {project_description}
                       </p>
                     </div>
-                    <div className="flex mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
-                      <span className="min-w-[150px] text-grey whitespace-nowrap">
+                    <div className="flex mb-4 text-white md:flex-col md:mb-2 md:font-thin md:text-[14px]">
+                      <span className="whitespace-nowrap min-w-[150px] text-grey">
                         Project stack:
                       </span>
-                      <p className="w-full whitespace-pre-wrap font-thin">
+                      <p className="w-full font-thin whitespace-pre-wrap">
                         {project_stack}
                       </p>
                     </div>
-                    <div className="flex mb-4 text-white md:mb-1 md:font-thin md:text-[14px]">
-                      <span className="min-w-[150px] text-grey whitespace-nowrap">
+                    <div className="flex mb-4 text-white md:flex-col md:mb-2 md:font-thin md:text-[14px]">
+                      <span className="whitespace-nowrap min-w-[150px] text-grey">
                         My role on project:
                       </span>
-                      <p className="w-full whitespace-pre-wrap font-thin">
+                      <p className="w-full font-thin whitespace-pre-wrap">
                         {your_impact}
                       </p>
                     </div>

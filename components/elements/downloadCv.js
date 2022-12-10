@@ -1,7 +1,7 @@
 import { useMedia } from "../../providers/mediaContext"
 import { StyledLink } from "./link"
 
-function DownloadCv({ className }) {
+function DownloadCv({ className = "" }) {
   const { xl } = useMedia()
   return xl ? (
     <a
@@ -9,9 +9,9 @@ function DownloadCv({ className }) {
       download="frontend-engineer-halyna-yavtushenko"
       target="_blank"
       alt="YavtushenkoHalynaFrontendEngineer.pdf"
-      className={`flex flex-wrap justify-start items-center ml-6 ${className}`}
+      className={`flex flex-wrap justify-start items-center ml-6 md:ml-[21px] ${className}`}
     >
-      <div className="transition-colors relative text-[12px] uppercase text-grey hover:text-white before:inline-block before:absolute before:w-5 before:h-5 before:hover:transition-all before:bg-[url('/icons/download-cv-grey.svg')] before:left-0 before:bottom-[3px] before:bg-no-repeat before:bg-contain hover:before:bg-[url('/icons/download-cv.png')] whitespace-nowrap pl-8">
+      <div className="transition-colors relative text-[12px] uppercase text-grey hover:text-white before:inline-block before:absolute before:w-5 before:h-5 before:hover:transition-all before:bg-[url('/icons/download-cv-grey.svg')] before:left-0 before:bottom-[3px] before:bg-no-repeat before:bg-contain hover:before:bg-[url('/icons/download-cv.png')] whitespace-nowrap pl-8 md:before:w-4 md:before:h-4">
         Download cv
       </div>
     </a>
