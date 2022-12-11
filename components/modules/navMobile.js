@@ -8,7 +8,9 @@ import { routesMobile } from "../../config/navRoutes"
 function NavMobile({ className = "" }) {
   const [openNavModal, setOpenNavModal] = useState(false)
   return (
-    <div className={`fixed top-0 left-0 h-auto w-screen z-[1] md:pt-[40px] md:pb-[10px] md:bg-blackCustom ${className}`}>
+    <div
+      className={`fixed top-0 left-0 h-auto w-screen z-[1] md:pt-[40px] md:pb-[10px] md:bg-blackCustom ${className}`}
+    >
       <Logo className="pl-[20px]" />
       <div
         onClick={() => setOpenNavModal(!openNavModal)}
