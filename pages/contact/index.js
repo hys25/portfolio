@@ -86,14 +86,14 @@ function Contact() {
           send message
         </button>
       </form>
-      <div className="absolute md:hidden bottom-[90px] left-[90px] w-[80px] h-[225px]">
+      <div className="absolute md:hidden bottom-[90px] left-[90px] w-[80px] h-[245px]">
         <img
           alt="Arrow down"
           className="object-contain w-full bg-no-repeat bg-contain animate-pulse rotate-[-10deg]"
           src="./../../icons/arrow-left-white.svg"
         />
       </div>
-      <div className="absolute font-light whitespace-pre-line md:hidden bottom-[90px] left-[180px] w-[600px] h-[224px] text-grey font-[12px]">
+      <div className="absolute font-light whitespace-pre-line md:hidden bottom-[90px] left-[180px] w-[600px] h-[235px] text-grey font-[12px]">
         <Typewriter
           onInit={(typewriter) => {
             typewriter
