@@ -25,7 +25,7 @@ function Project({ projects }) {
   return (
     <>
       {xl ? (
-        <NavMobile className="mt-5 pr-[20px]" />
+        <NavMobile className="mt-5 pr-[20px] md:mt-0" />
       ) : (
         <Sidebar className="mt-5" />
       )}
@@ -54,15 +54,15 @@ function Project({ projects }) {
                 <div
                   data-anchor={`${normalizeAnchor(project_name)}`}
                   key={_id}
-                  className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[20px] pr-[30px] md:pt-[80px] md:px-[20px]"
+                  className="flex relative flex-col justify-start pt-5 w-full h-full section pb-[20px] pr-[30px] md:pt-[105px] md:px-[20px]"
                 >
-                  <h1 className="w-full text-right text-white uppercase md:mt-0 md:text-center text-[56px] leading-[56px] mt-[25px] md:text-[16px]">
+                  <h1 className="w-full text-right text-white uppercase md:mt-0 md:text-center text-[56px] leading-[56px] mt-[25px] md:text-[16px] md:leading-[26px]">
                     {project_name}
                   </h1>
                   <div className="flex flex-col justify-start items-start mx-auto md:mt-2 max-w-[1000px] mt-[30px]">
                     <img
                       alt="Project"
-                      className="object-cover mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[350px] translate-z-0 md:h-[180px]"
+                      className="object-cover mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[300px] translate-z-0 md:h-[135px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
                     {/* {background_image_url && (
@@ -72,27 +72,27 @@ function Project({ projects }) {
                         src={`${NEXT_PUBLIC_BE_HOST}/${background_image_url}`}
                       />
                     )} */}
-                    <div className="flex mb-4 text-white md:flex-col md:mb-2 md:font-thin md:text-[14px]">
-                      <span className="whitespace-nowrap min-w-[150px] text-grey">
+                    <div className="flex mb-4 text-white md:flex-col md:mb-1 md:font-thin md:text-[14px]">
+                      <span className="whitespace-nowrap min-w-[150px] text-grey md:leading-[18px]">
                         Project description:
                       </span>
-                      <p className="w-full font-thin whitespace-pre-wrap">
+                      <p className="w-full font-thin whitespace-pre-wrap md:leading-[18px]">
                         {project_description}
                       </p>
                     </div>
-                    <div className="flex mb-4 text-white md:flex-col md:mb-2 md:font-thin md:text-[14px]">
-                      <span className="whitespace-nowrap min-w-[150px] text-grey">
+                    <div className="flex mb-4 text-white md:flex-col md:mb-1 md:font-thin md:text-[14px]">
+                      <span className="whitespace-nowrap min-w-[150px] text-grey md:leading-[18px]">
                         Project stack:
                       </span>
-                      <p className="w-full font-thin whitespace-pre-wrap">
+                      <p className="w-full font-thin whitespace-pre-wrap md:leading-[18px]">
                         {project_stack}
                       </p>
                     </div>
-                    <div className="flex mb-4 text-white md:flex-col md:mb-2 md:font-thin md:text-[14px]">
-                      <span className="whitespace-nowrap min-w-[150px] text-grey">
+                    <div className="flex mb-4 text-white md:flex-col md:mb-1 md:font-thin md:text-[14px]">
+                      <span className="whitespace-nowrap min-w-[150px] text-grey md:leading-[18px]">
                         My role on project:
                       </span>
-                      <p className="w-full font-thin whitespace-pre-wrap">
+                      <p className="w-full font-thin whitespace-pre-wrap md:leading-[18px]">
                         {your_impact}
                       </p>
                     </div>

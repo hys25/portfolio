@@ -9,8 +9,8 @@ function MoreAboutThisWebsite() {
         description="This portfolio was fully designed and built by Halyna Yavtushenko. It consists of 3 repositories: website, admin and backend. For the website used Next.js framework. For admin - React library, Redux + RTK Query, Tailwind. For server-side - Express.js"
       />
       <div className="flex mx-auto w-full text-white md:flex-col mt-[150px] max-w-[1200px] md:mt-[80px]">
-        <div className="flex flex-col w-2/3 md:mb-4 md:m-full">
-          <div className="mb-8 pr-[150px]">
+        <div className="flex flex-col w-2/3 md:mb-4 md:m-full md:w-full">
+          <div className="mb-8 pr-[150px] md:pr-0">
             <h2 className="mb-4 font-bold">More about this website:</h2>
             <p className="mb-4">
               I built my portfolio website from scratch. It includes UI/UX

@@ -30,7 +30,7 @@ module.exports = {
       display: ["group-hover"],
       colors: {
         white: "#FFFFFF",
-        black: "#101011",
+        blackCustom: "#171717",
         grey: "#A8A8A8",
         greyDark: "#323130",
         greyLight: "#e0dede",

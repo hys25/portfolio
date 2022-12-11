@@ -13,9 +13,9 @@ function Default({ children }) {
   }, [])
 
   return (
-    <div className="flex relative flex-col justify-between pt-5 pr-10 w-screen h-screen md:justify-start md:px-5 md:w-full md:min-h-screen bg-neutral-900 pb-[70px] pl-[190px] md:pb-[20px] md:pt-[45px] md:min-w-screen">
+    <div className="flex relative flex-col justify-between pt-5 pr-10 w-screen h-screen md:justify-start md:px-5 md:w-full md:h-full md:min-h-screen bg-neutral-900 pb-[70px] pl-[190px] md:pb-[20px] md:pt-[45px] md:min-w-screen">
       {isNdaMessageInStorage ? (
-        <div className="absolute top-[10px] right-[calc(50%-380px)] z-10 flex items-end text-white md:top-[5px] md:right-0 md:items-start md:px-5">
+        <div className="fixed top-[10px] right-[calc(50%-380px)] z-10 flex items-end text-white md:top-[5px] md:right-0 md:items-start md:px-5">
           <img
             alt="Arrow down"
             className="object-contain bg-no-repeat bg-contain w-[20px] h-[20px] max-h-[200px] md:right-[1px] md:max-h-[auto] md:w-[14px] md:h-[14px] md:opacity-[0.5]"
@@ -27,7 +27,7 @@ function Default({ children }) {
           </p>
         </div>
       ) : (
-        <div className="absolute top-[10px] right-[calc(50%-380px)] z-10 flex items-end text-white md:top-[5px] md:right-0 md:items-start md:px-5">
+        <div className="fixed top-[10px] right-[calc(50%-380px)] z-10 flex items-end text-white md:top-[5px] md:right-0 md:items-start md:px-5">
           <img
             alt="Arrow down"
             className="object-contain bg-no-repeat bg-contain w-[20px] h-[20px] max-h-[200px] md:right-[1px] md:w-[14px] md:h-[14px] md:opacity-[0.5]"

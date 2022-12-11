@@ -11,7 +11,7 @@ function Logo({ className }) {
       <Link href="/">
         <a
           href="/"
-          className={`flex items-end ml-2 mb-[20px] md:ml-0 md:mb-0 ${className}`}
+          className={`flex items-end ml-2 mb-[20px] md:ml-0 md:mb-0 md:w-[85px] ${className}`}
         >
           <img
             alt="Logo"

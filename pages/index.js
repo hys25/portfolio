@@ -74,7 +74,7 @@ function Homepage({ projects, message, isError }) {
       <h1 className="text-[0px]">
         Front-End Engineer portfolio - Halyna Yavtushenko
       </h1>
-      <div className="flex justify-between items-end h-full">
+      <div className="flex justify-between items-end h-full md:h-[calc(100vh-65px)]">
         <div className="md:hidden">
           <div
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
@@ -100,7 +100,7 @@ function Homepage({ projects, message, isError }) {
                     }
               }
             />
-            <div className="absolute top-0 left-0 z-0 w-full h-full bg-black opacity-0" />
+            <div className="absolute top-0 left-0 z-0 w-full h-full bg-blackCustom opacity-0" />
           </div>
         </div>
         <div className="flex relative z-0 flex-col justify-end items-end md:justify-start md:items-start w-fit max-w-[600px]">
@@ -125,7 +125,7 @@ function Homepage({ projects, message, isError }) {
                   href={`/project#${normalizeAnchor(project_name)}`}
                 >
                   <div className="flex flex-col cursor-pointer">
-                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight">
+                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight md:font-medium">
                       {project_name}
                     </h2>
                     <img
@@ -157,7 +157,7 @@ function Homepage({ projects, message, isError }) {
                   passHref
                 >
                   <a href={`/project#${normalizeAnchor(project_name)}`}>
-                    <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-thin hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[13px] md:mr-[10px] md:after:hidden md:text-[16px] md:text-greyLight">
+                    <h2 className="relative normal-case cursor-pointer md:ml-0 md:font-normal hover:text-white text-[20px] text-grey ml-[25px] after:w-[5px] after:h-[5px] after:rounded after:bg-grey after:absolute after:right-[-15px] after:top-[13px] md:mr-[10px] md:after:hidden md:text-[16px] md:text-greyLight">
                       {project_name}
                     </h2>
                     <p className="text-[0px]">{project_description}</p>

@@ -8,14 +8,14 @@ import { routesMobile } from "../../config/navRoutes"
 function NavMobile({ className = "" }) {
   const [openNavModal, setOpenNavModal] = useState(false)
   return (
-    <div className={`fixed left-0 h-auto w-screen z-[1] ${className}`}>
+    <div className={`fixed top-0 left-0 h-auto w-screen z-[1] md:pt-[40px] md:pb-[10px] md:bg-blackCustom ${className}`}>
       <Logo className="pl-[20px]" />
       <div
         onClick={() => setOpenNavModal(!openNavModal)}
         onKeyDown={() => setOpenNavModal(!openNavModal)}
         role="button"
         tabIndex={0}
-        className="flex absolute justify-center items-center cursor-pointer top-[5px] right-[20px] h-[30px] w-[30px] md:top-[20px]"
+        className="flex absolute justify-center items-center cursor-pointer top-[5px] right-[20px] h-[30px] w-[30px] md:top-[65px]"
       >
         <img
           alt="Arrow down"
@@ -24,14 +24,14 @@ function NavMobile({ className = "" }) {
         />
       </div>
       <div
-        className={`absolute top-[-20px] left-0 z-50 w-1/4 h-screen bg-black/[.8] flex flex-col justify-center transition-all ${
+        className={`absolute top-[-20px] left-0 z-50 w-1/4 h-screen bg-blackCustom/[.8] flex flex-col justify-center transition-all ${
           openNavModal ? "translate-x-0" : "translate-x-[-100%]"
         }`}
         onClick={() => setOpenNavModal(false)}
         role="presentation"
       />
       <div
-        className={`absolute top-[-20px] right-0 z-50 w-3/4 h-screen bg-[#2a2929] flex flex-col justify-center transition-all md:top-[-45px] ${
+        className={`absolute top-[-20px] right-0 z-50 w-3/4 h-screen bg-[#2a2929] flex flex-col justify-center transition-all md:top-0 ${
           openNavModal ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
