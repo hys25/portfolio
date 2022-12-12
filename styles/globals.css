@@ -25,6 +25,12 @@ body {
   right: 30px !important;
 }
 
+@media only screen and (max-width: 600px) {
+  #fp-nav.fp-right {
+    height: 355px !important;
+  }
+}
+
 #fp-nav.fp-right ul {
   height: 500px !important;
 }
@@ -34,6 +40,10 @@ body {
   width: 2px !important;
   height: 15% !important;
   background-color: #282828;
+}
+
+#fp-nav ul li a {
+  transition: all 0.3s;
 }
 
 #fp-nav ul li a.active {
