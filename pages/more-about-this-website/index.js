@@ -14,26 +14,26 @@ function MoreAboutThisWebsite() {
             <h2 className="mb-4 font-bold">More about this website:</h2>
             <p className="mb-4">
               I built my portfolio website from scratch. It includes UI/UX
-              design prototyping in the figma, planning system architecture and
+              design prototyping in the <span className="bg-greyDark">Figma</span>, planning system architecture and
               picking up web technological accordingly.
             </p>
             <p className="mb-4">
               Portfolio consists of 3 repositories: website, admin and backend.
             </p>
             <p className="mb-4">
-              For the website I used Next.js framework to benefit from
+              For the website I used <span className="bg-greyDark">Next.js</span> framework to benefit from
               server-side rendering features, rich optimization tools and
               simplisity of usage.
             </p>
             <p className="mb-4">
-              For the dashboard I decided to go with a bare React library for
-              the UI layer, Redux + RTK Query for the business logic layer. For
-              styling I choosed modern utility-first Tailwind CSS framework to
+              For the dashboard I decided to go with a bare <span className="bg-greyDark">React</span> library for
+              the UI layer, <span className="bg-greyDark">Redux + RTK Query</span> for the business logic layer. For
+              styling I choosed modern utility-first <span className="bg-greyDark">Tailwind CSS</span> framework to
               be able to bootstrap dashboard UI in the efficient, scalable
               approach.
             </p>
             <p className="mb-4">
-              On the server-side I setup Express.js app with MongoDB database
+              On the server-side I setup <span className="bg-greyDark">Express.js</span> app with <span className="bg-greyDark">MongoDB database</span>
               and mongoose ODM. I decided to go with non-relational database in
               order to keep simpler prototyping possibilities, less code
               advantage and easier future scalability.
