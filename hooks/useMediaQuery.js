@@ -5,7 +5,10 @@ function getStrMaxWidth(width) {
 }
 
 export const BREAKPOINTS = {
+  xxl: getStrMaxWidth(1570),
   xl: getStrMaxWidth(1279),
+  md: getStrMaxWidth(1024),
+  sm: getStrMaxWidth(650),
   xs: getStrMaxWidth(375),
 }
 

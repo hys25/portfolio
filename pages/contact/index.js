@@ -103,7 +103,7 @@ function Contact() {
               )
               .pauseFor(1000)
               .typeString(
-                " Reach me out on Linkedin or through the form on the right 👉"
+                " Reach out to me on Linkedin or through the form on the right 👉"
               )
               .start()
           }}

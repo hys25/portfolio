@@ -74,8 +74,8 @@ function Homepage({ projects, message, isError }) {
       <h1 className="text-[0px]">
         Front-End Engineer portfolio - Halyna Yavtushenko
       </h1>
-      <div className="flex justify-between items-end h-full md:h-[calc(100vh-65px)]">
-        <div className="md:hidden">
+      <div className="flex justify-between items-end h-full md:h-[calc(100vh-65px)] xl:justify-end xl:w-full">
+        <div className="xl:hidden">
           <div
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
@@ -125,7 +125,7 @@ function Homepage({ projects, message, isError }) {
                   href={`/project#${normalizeAnchor(project_name)}`}
                 >
                   <div className="flex flex-col cursor-pointer">
-                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight md:font-medium">
+                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight md:font-medium font-[500]">
                       {project_name}
                     </h2>
                     <img
