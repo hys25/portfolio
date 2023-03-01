@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { NextSeo } from "next-seo"
-import Typewriter from "typewriter-effect"
 import Default from "../../components/layout/default"
 import { Input, Textarea } from "../../components/elements/input"
 import { post } from "../../lib/api"
@@ -86,29 +85,6 @@ function Contact() {
           send message
         </button>
       </form>
-      <div className="absolute md:hidden bottom-[90px] left-[90px] w-[80px] h-[245px]">
-        <img
-          alt="Arrow down"
-          className="object-contain w-full bg-no-repeat bg-contain animate-pulse rotate-[-10deg]"
-          src="./../../icons/arrow-left-white.svg"
-        />
-      </div>
-      <div className="absolute font-light whitespace-pre-line md:hidden bottom-[90px] left-[180px] w-[600px] h-[235px] text-grey font-[12px]">
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .pauseFor(500)
-              .typeString(
-                "I'm always happy to make new friends, face new challenges and to have some fun. Feel free to say hi! 👋           "
-              )
-              .pauseFor(1000)
-              .typeString(
-                " Reach out to me on Linkedin or through the form on the right 👉"
-              )
-              .start()
-          }}
-        />
-      </div>
     </Default>
   )
 }
