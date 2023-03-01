@@ -2,7 +2,6 @@ import { useState } from "react"
 import { NavLink } from "../elements/link"
 import Logo from "../elements/logo"
 import SocialLinks from "../elements/socialLinks"
-import DownloadCv from "../elements/downloadCv"
 import { routesMobile } from "../../config/navRoutes"
 
 function NavMobile({ className = "" }) {
@@ -57,7 +56,6 @@ function NavMobile({ className = "" }) {
           ))}
         </ul>
         <SocialLinks title />
-        <DownloadCv />
       </div>
     </div>
   )

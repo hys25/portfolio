@@ -15,7 +15,7 @@ function Logo({ className }) {
         >
           <img
             alt="Logo"
-            className="object-contain bg-no-repeat bg-contain w-[100px] h-[80px] md:right-[1px] md:w-[65px] md:h-[60px]"
+            className="object-contain bg-no-repeat bg-contain w-[120px] h-[100px] md:right-[1px] md:w-[65px] md:h-[60px]"
             src="./../../icons/logo-galinie.svg"
           />
         </a>
