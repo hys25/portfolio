@@ -135,7 +135,7 @@ function Homepage({ projects, message, isError }) {
                     </h2>
                     <img
                       alt="Project's background"
-                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-180px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-85%] md:group-hover:hidden"
+                      className="hidden object-contain absolute z-10 h-auto bg-no-repeat bg-contain group-hover:block top-[-50px] left-[-700px] min-w-[850px] w-[850px] max-h-[550px] md:min-w-full md:max-w-screen md:w-full md:left-0 md:top-[-85%] md:group-hover:hidden"
                       src={`${NEXT_PUBLIC_BE_HOST}/${
                         background_image_url || main_image_url
                       }`}
