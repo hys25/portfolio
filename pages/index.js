@@ -125,8 +125,13 @@ function Homepage({ projects, message, isError }) {
                   href={`/project#${normalizeAnchor(project_name)}`}
                 >
                   <div className="flex flex-col cursor-pointer">
-                    <h2 className="z-20 uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight md:font-medium font-[500]">
+                    <h2 className="z-20 relative uppercase whitespace-nowrap cursor-pointer group-hover:text-white text-[56px] text-grey md:text-[18px] md:text-greyLight md:font-medium font-[500]">
                       {project_name}
+                      <img
+                        alt="Arrow to the left"
+                        className="hidden absolute z-10 group-hover:block bottom-[29px] left-[-55px] w-[40px] h-[40px] -rotate-90"
+                        src="./../../icons/arrow-top-right-white.svg"
+                      />
                     </h2>
                     <img
                       alt="Project's background"
