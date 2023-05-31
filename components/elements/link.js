@@ -11,10 +11,16 @@ const StyledLink = styled.a`
 function NavLink({ href, name, active, className = "" }) {
   const { xl } = useMedia()
   return (
-    <Link href={href} passHref onClick={() => event({
-      action: 'Navigation',
-      params: {page: name}
-    })}>
+    <Link
+      href={href}
+      passHref
+      onClick={() =>
+        event({
+          action: "Navigation",
+          params: { page: name },
+        })
+      }
+    >
       {xl ? (
         <a
           href={href}
