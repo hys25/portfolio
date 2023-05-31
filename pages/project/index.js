@@ -62,7 +62,7 @@ function Project({ projects }) {
                   <div className="flex flex-col justify-start items-start mx-auto md:mt-2 max-w-[1000px] mt-[30px]">
                     <img
                       alt="Project"
-                      className="object-cover mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[300px] translate-z-0 md:h-[135px]"
+                      className="object-contain mb-8 w-full border-transparent outline-none md:object-cover md:mb-2 outline-transparent h-[350px] translate-z-0 md:h-[135px]"
                       src={`${NEXT_PUBLIC_BE_HOST}/${main_image_url}`}
                     />
                     {/* {background_image_url && (
