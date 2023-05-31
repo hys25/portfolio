@@ -1,6 +1,7 @@
 import Link from "next/link"
 import styled from "styled-components"
 import { useMedia } from "../../providers/mediaContext"
+import { event } from "../../lib/utils"
 
 const StyledLink = styled.a`
   writing-mode: vertical-rl;
@@ -10,7 +11,10 @@ const StyledLink = styled.a`
 function NavLink({ href, name, active, className = "" }) {
   const { xl } = useMedia()
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref onClick={() => event({
+      action: 'Navigation',
+      params: {page: name}
+    })}>
       {xl ? (
         <a
           href={href}
