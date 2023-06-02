@@ -52,12 +52,12 @@ function About({ skills, message, isError }) {
             Interested in the entire
             <span className="bg-greyDark"> full-stack</span> spectrum and thrive
             on working with ambitious teams on exciting projects. Aside from my
-            professional pursuits, I'm an avid dog lover, and I've creatively
-            used dogs as a metaphor to describe the diverse range of projects
-            I've had the privilege to work on. Due to confidentiality reasons, I
-            cannot disclose specific project details, but I would be thrilled to
-            discuss my contributions and showcase my portfolio during an
-            interview.
+            professional pursuits, I&apos;m an avid dog lover, and I&apos;ve
+            creatively used dogs as a metaphor to describe the diverse range of
+            projects I&apos;ve had the privilege to work on. Due to
+            confidentiality reasons, I cannot disclose specific project details,
+            but I would be thrilled to discuss my contributions and showcase my
+            portfolio during an interview.
           </p>
           <Link href="/contact" passHref>
             <a
