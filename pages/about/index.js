@@ -31,31 +31,33 @@ function About({ skills, message, isError }) {
             working for Studio.gd.
           </p>
           <p className="mb-5">
-            I have a serious passion for creating intuitive, dynamic user
-            experiences, UI effects and animations. I like to resolve design
-            problems, create smart user interface and imagine useful
-            interaction, developing rich web applications.
+            I am dedicated to solving design challenges, crafting smart user
+            interfaces, and envisioning meaningful interactions while developing
+            robust web applications.
           </p>
           <p className="mb-5">
-            The main area of my expertise is{" "}
-            <span className="bg-greyDark"> front-end development</span>, HTML,
-            CSS, JS, <span className="bg-greyDark"> React, Next.js</span>,
-            building web apps, features, animations, and coding interactive
-            responsive layouts. I also have
+            My expertise lies in{" "}
+            <span className="bg-greyDark">front-end development </span>,
+            encompassing HTML, CSS, JavaScript,
+            <span className="bg-greyDark"> React, Next.js</span>. I excel at
+            building feature-rich web apps, coding interactive and responsive
+            layouts. Additionally, I have valuable
             <span className="bg-greyDark">
               {" "}
-              backend developement experience{" "}
+              experience in backend development{" "}
             </span>
-            with Express.js.
+            using Express.js.
           </p>
           <p className="mb-5">
             Interested in the entire
-            <span className="bg-greyDark"> full-stack</span> spectrum and
-            working on ambitious projects with{" "}
-            <span className="bg-greyDark"> positive people </span>. As you
-            probably understood I&apos;m obsessed with dogs. Obviously, I
-            can&apos;t show the project&apos;s name, logos, pictures, etc, so I
-            decided dogs can help describe projects I worked on
+            <span className="bg-greyDark"> full-stack</span> spectrum and thrive
+            on working with ambitious teams on exciting projects. Aside from my
+            professional pursuits, I'm an avid dog lover, and I've creatively
+            used dogs as a metaphor to describe the diverse range of projects
+            I've had the privilege to work on. Due to confidentiality reasons, I
+            cannot disclose specific project details, but I would be thrilled to
+            discuss my contributions and showcase my portfolio during an
+            interview.
           </p>
           <Link href="/contact" passHref>
             <a
