@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react"
+import { useState, useMemo } from "react"
 import { NextSeo } from "next-seo"
 import Link from "next/link"
 import Default from "../components/layout/default"
@@ -6,6 +6,7 @@ import { get } from "../lib/api"
 import { normalizeAnchor } from "../lib/utils"
 import { NEXT_PUBLIC_BE_HOST } from "../config"
 import { useMedia } from "../providers/mediaContext"
+import ImageHidden from "../components/elements/imageHidden"
 
 export async function getServerSideProps() {
   const { data, message, isError } = await get(`${NEXT_PUBLIC_BE_HOST}/project`)
@@ -34,20 +35,20 @@ function Homepage({ projects, message, isError }) {
   }, [projects])
   const [mousePosition, setMousePosition] = useState({ top: 0, left: 0 })
 
-  useEffect(() => {
-    const image = document.getElementById("image")
-    const boundaries = image.getBoundingClientRect()
-    const handler = (event) => {
-      image.style.setProperty("--x", `${event.clientX - boundaries.left}px`)
-      image.style.setProperty("--y", `${event.clientY - boundaries.top}px`)
-      setMousePosition({ top: event.clientX, left: event.client })
-    }
+  // useEffect(() => {
+  //   const image = document.getElementById("image")
+  //   const boundaries = image.getBoundingClientRect()
+  //   const handler = (event) => {
+  //     image.style.setProperty("--x", `${event.clientX - boundaries.left}px`)
+  //     image.style.setProperty("--y", `${event.clientY - boundaries.top}px`)
+  //     setMousePosition({ top: event.clientX, left: event.client })
+  //   }
 
-    document.addEventListener("mousemove", handler)
-    return () => {
-      document.removeEventListener("mousemove", handler)
-    }
-  })
+  //   document.addEventListener("mousemove", handler)
+  //   return () => {
+  //     document.removeEventListener("mousemove", handler)
+  //   }
+  // })
 
   return (
     <Default>
@@ -75,7 +76,8 @@ function Homepage({ projects, message, isError }) {
         Front-End Engineer portfolio - Halyna Yavtushenko
       </h1>
       <div className="flex justify-between items-end h-full md:h-[calc(100vh-65px)] xl:justify-end xl:w-full">
-        <div className="xl:hidden">
+        <ImageHidden mousePosition={mousePosition} setMousePosition={setMousePosition} />
+        {/* <div className="xl:hidden">
           <div
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"
             style={{ transform: "translate(-50%, -50%)", ...mousePosition }}
@@ -102,7 +104,7 @@ function Homepage({ projects, message, isError }) {
             />
             <div className="absolute top-0 left-0 z-0 w-full h-full bg-blackCustom opacity-0" />
           </div>
-        </div>
+        </div> */}
         <div className="flex relative z-0 flex-col justify-end items-end md:justify-start md:items-start w-fit max-w-[600px]">
           {isError && <div className="text-red">{message}</div>}
           {mainProjects.map(
