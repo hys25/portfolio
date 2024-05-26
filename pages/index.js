@@ -76,7 +76,10 @@ function Homepage({ projects, message, isError }) {
         Front-End Engineer portfolio - Halyna Yavtushenko
       </h1>
       <div className="flex justify-between items-end h-full md:h-[calc(100vh-65px)] xl:justify-end xl:w-full">
-        <ImageHidden mousePosition={mousePosition} setMousePosition={setMousePosition} />
+        <ImageHidden
+          mousePosition={mousePosition}
+          setMousePosition={setMousePosition}
+        />
         {/* <div className="xl:hidden">
           <div
             className="fixed rounded-full w-[300px] h-[300px] z-[-2] md:w-[100px] md:h-[100px]"

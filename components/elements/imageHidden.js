@@ -49,4 +49,4 @@ function ImageHidden({ mousePosition, setMousePosition }) {
   )
 }
 
-export default ImageHidden;
+export default ImageHidden
