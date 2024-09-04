@@ -4,8 +4,24 @@ function LinksPage() {
   return (
     <>
       <NextSeo
-        title="Tech description of portfolio"
-        description="This portfolio was fully designed and built by Halyna Yavtushenko. It consists of 3 repositories: website, admin, and backend. For the website, used Next.js framework. For admin - React library, Redux + RTK Query, Tailwind. For server-side - Express.js."
+        title="Halyna Yavtushenko | Coding Journey & Resources"
+        description="Explore coding resources, latest blog posts, and projects from Halyna Yavtushenko. Discover tips and tools from my coding journey!"
+        canonical="https://www.galinie.ca//links"
+        openGraph={{
+          title: "Halyna Yavtushenko | Coding Journey & Resources",
+          description:
+            "Explore coding resources, latest blog posts, and projects from Halyna Yavtushenko. Discover tips and tools from my coding journey!",
+          url: "https://www.galinie.ca//links",
+          images: [
+            {
+              url: "/og-photo.jpg", // Image for social sharing
+              width: 800,
+              height: 600,
+              alt: "Halyna Yavtushenko Links Page",
+            },
+          ],
+          site_name: "Halyna Yavtushenko Links Page",
+        }}
       />
       <div className="relative min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
         {/* Conditional Background Images */}
